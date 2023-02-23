@@ -37,24 +37,6 @@ importers:
       prettier: registry.npmmirror.com/prettier/2.8.4
       typescript: registry.npmmirror.com/typescript/4.9.5
 
-  libs/imports:
-    specifiers:
-      typescript: ^4.9.4
-      vite: ^4.0.4
-      vite-plugin-dts: 2.0.0-beta.0
-    devDependencies:
-      typescript: registry.npmmirror.com/typescript/4.9.5
-      vite: registry.npmmirror.com/vite/4.1.1
-      vite-plugin-dts: registry.npmmirror.com/vite-plugin-dts/2.0.0-beta.0_vite@4.1.1
-
-  libs/resolves:
-    specifiers:
-      typescript: ^4.9.4
-      vite: ^4.0.4
-    devDependencies:
-      typescript: registry.npmmirror.com/typescript/4.9.5
-      vite: registry.npmmirror.com/vite/4.1.1
-
   libs/utils:
     specifiers:
       '@types/node': ^18.14.0
