@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+
+  "compilerOptions": {
+    "baseUrl": "./", // 代码中路径的基本路径
+    "paths": {
+      // 模块名到基于 baseUrl 的路径映射的列表
+      "@": ["src"],
+      "@/*": ["src/*"]
+    },
+    "typeRoots": ["node_modules/@types", "src/types"] // 不指定typeRoots，默认所有可见@types
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
