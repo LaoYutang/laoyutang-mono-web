@@ -7,19 +7,14 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/main.cjs",
-  "module": "./dist/main.js",
-  "types": "./dist/main.d.ts",
+  "main": "./lib/main.js",
+  "module": "./es/main.mjs",
+  "types": "./es/main.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/main.d.ts",
-      "require": "./dist/main.cjs",
-      "import": "./dist/main.js"
-    },
-    "./hooks": {
-      "types": "./dist/hooks.d.ts",
-      "import": "./dist/hooks.js",
-      "require": "./dist/hooks.cjs"
+      "types": "./es/main.d.ts",
+      "require": "./lib/main.js",
+      "import": "./es/main.mjs"
     }
   },
   "scripts": {

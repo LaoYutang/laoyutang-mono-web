@@ -3,4 +3,5 @@
 **/auto-imports.d.ts
 **/.eslintrc-auto-import.json
 **/components.d.ts
-
+**/lib/*
+**/es/*
