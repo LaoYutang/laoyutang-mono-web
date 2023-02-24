@@ -35,7 +35,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts}": [
+    "*.{js,ts,jsx,tsx,vue,json}": [
       "pnpm eslint",
       "pnpm prettier"
     ]
