@@ -4,9 +4,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import * as path from 'path'
-import { hooks } from 'utils/hooks'
+import { UtilsImport } from 'imports'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   server: {
     base: '/',
@@ -30,15 +29,7 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: [
-        'vue',
-        'vue-router',
-        'pinia',
-        '@vueuse/core',
-        {
-          '@/modules/utils': hooks,
-        },
-      ],
+      imports: ['vue', 'vue-router', 'pinia', '@vueuse/core', UtilsImport()],
       dts: 'src/auto-imports.d.ts',
       eslintrc: { enabled: true },
       resolvers: [ElementPlusResolver()],

@@ -17,6 +17,7 @@
     "wujie-vue3": "^1.0.6"
   },
   "devDependencies": {
+    "imports": "workspace:*",
     "@types/node": "^18.14.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "sass": "^1.58.3",

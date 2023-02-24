@@ -5,14 +5,14 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
-  const _Request: typeof import('@/modules/utils')['_Request']
-  const _Stack: typeof import('@/modules/utils')['_Stack']
-  const _debounce: typeof import('@/modules/utils')['_debounce']
-  const _deepClone: typeof import('@/modules/utils')['_deepClone']
-  const _getVarType: typeof import('@/modules/utils')['_getVarType']
-  const _isPrimitVar: typeof import('@/modules/utils')['_isPrimitVar']
+  const _Request: typeof import('utils')['_Request']
+  const _Stack: typeof import('utils')['_Stack']
+  const _debounce: typeof import('utils')['_debounce']
+  const _deepClone: typeof import('utils')['_deepClone']
+  const _getVarType: typeof import('utils')['_getVarType']
+  const _isPrimitVar: typeof import('utils')['_isPrimitVar']
   const _request: typeof import('./utils/request-main')['_request']
-  const _throttle: typeof import('@/modules/utils')['_throttle']
+  const _throttle: typeof import('utils')['_throttle']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
@@ -293,13 +293,5 @@ declare global {
 // for type re-export
 declare global {
   // @ts-ignore
-  export type {
-    Component,
-    ComponentPublicInstance,
-    ComputedRef,
-    InjectionKey,
-    PropType,
-    Ref,
-    VNode,
-  } from 'vue'
+  export type { Component,ComponentPublicInstance,ComputedRef,InjectionKey,PropType,Ref,VNode } from 'vue'
 }
