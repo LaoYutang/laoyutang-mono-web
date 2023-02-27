@@ -29,12 +29,12 @@ export default defineConfig({
     vueSetupExtend(),
     AutoImport({
       imports: ['vue', '@vueuse/core'],
-      dts: 'src/auto-imports.d.ts',
+      dts: 'src/components/auto-imports.d.ts',
       eslintrc: { enabled: true },
       resolvers: [ElementPlusResolver()],
     }),
     Components({
-      dts: 'src/components.d.ts',
+      dts: 'src/components/components.d.ts',
       resolvers: [ComponentsResolver(), ElementPlusResolver()],
     }),
   ],
