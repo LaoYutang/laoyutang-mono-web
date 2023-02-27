@@ -1,4 +1,4 @@
-export declare const ComponentsResolver: (name: string) => {
+export declare const ComponentsResolver: () => (name: string) => {
     name: string;
     from: string;
     sideEffects: string;

@@ -1,4 +1,4 @@
-const t = (s) => {
+const t = () => (s) => {
   if (/^Cm/.test(s))
     return {
       name: s,
