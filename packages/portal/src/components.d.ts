@@ -9,6 +9,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CmButton: typeof import('components/build/CmButton')['CmButton']
     ElButton: typeof import('element-plus/es')['ElButton']
     IconEpFold: typeof import('~icons/ep/fold')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

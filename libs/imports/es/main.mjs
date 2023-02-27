@@ -1,4 +1,6 @@
-import { UtilsImport as t } from "./utils-import.mjs";
+import { UtilsImport as e } from "./utils-import.mjs";
+import { ComponentsResolver as m } from "./components-resolver.mjs";
 export {
-  t as UtilsImport
+  m as ComponentsResolver,
+  e as UtilsImport
 };

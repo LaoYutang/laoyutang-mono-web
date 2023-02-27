@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("./utils-import.cjs");exports.UtilsImport=t.UtilsImport;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./utils-import.cjs"),o=require("./components-resolver.cjs");exports.UtilsImport=e.UtilsImport;exports.ComponentsResolver=o.ComponentsResolver;

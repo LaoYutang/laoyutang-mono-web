@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=e=>{if(/^Cm/.test(e))return{name:e,from:`components/build/${e}`,sideEffects:`components/build/${e}/style.css`}};exports.ComponentsResolver=t;

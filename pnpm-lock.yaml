@@ -38,6 +38,31 @@ importers:
       prettier: registry.npmmirror.com/prettier/2.8.4
       typescript: registry.npmmirror.com/typescript/4.9.5
 
+  libs/components:
+    specifiers:
+      '@types/node': ^18.14.0
+      '@vitejs/plugin-vue': ^4.0.0
+      fs-extra: ^11.1.0
+      sass: ^1.58.3
+      typescript: ^4.9.3
+      vite: ^4.1.0
+      vite-plugin-dts: 2.0.0-beta.0
+      vite-plugin-vue-setup-extend: ^0.4.0
+      vue: ^3.2.45
+      vue-tsc: ^1.0.24
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.2.47
+    devDependencies:
+      '@types/node': registry.npmmirror.com/@types/node/18.14.0
+      '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.1.1+vue@3.2.47
+      fs-extra: registry.npmmirror.com/fs-extra/11.1.0
+      sass: registry.npmmirror.com/sass/1.58.3
+      typescript: registry.npmmirror.com/typescript/4.9.5
+      vite: registry.npmmirror.com/vite/4.1.1_hlkwzk2izwsolfmdrejei4vrty
+      vite-plugin-dts: registry.npmmirror.com/vite-plugin-dts/2.0.0-beta.0_hn7hpz27f33r4d36fbzikx45ju
+      vite-plugin-vue-setup-extend: registry.npmmirror.com/vite-plugin-vue-setup-extend/0.4.0_vite@4.1.1
+      vue-tsc: registry.npmmirror.com/vue-tsc/1.1.0_typescript@4.9.5
+
   libs/imports:
     specifiers:
       typescript: ^4.9.4
@@ -94,6 +119,7 @@ importers:
       '@types/node': ^18.14.0
       '@vitejs/plugin-vue': ^4.0.0
       '@vueuse/core': ^9.13.0
+      components: workspace:*
       element-plus: ^2.2.32
       imports: workspace:*
       sass: ^1.58.3
@@ -109,6 +135,7 @@ importers:
       wujie-vue3: ^1.0.6
     dependencies:
       '@vueuse/core': registry.npmmirror.com/@vueuse/core/9.13.0_vue@3.2.47
+      components: link:../../libs/components
       element-plus: registry.npmmirror.com/element-plus/2.2.32_vue@3.2.47
       utils: link:../../libs/utils
       vue: registry.npmmirror.com/vue/3.2.47
@@ -6039,7 +6066,7 @@ packages:
       kolorist: registry.npmmirror.com/kolorist/1.7.0
       magic-string: registry.npmmirror.com/magic-string/0.29.0
       ts-morph: registry.npmmirror.com/ts-morph/17.0.1
-      vite: registry.npmmirror.com/vite/4.1.1_@types+node@18.14.0
+      vite: registry.npmmirror.com/vite/4.1.1_hlkwzk2izwsolfmdrejei4vrty
     transitivePeerDependencies:
       - '@types/node'
       - rollup
@@ -6065,11 +6092,24 @@ packages:
       kolorist: registry.npmmirror.com/kolorist/1.7.0
       magic-string: registry.npmmirror.com/magic-string/0.29.0
       ts-morph: registry.npmmirror.com/ts-morph/17.0.1
-      vite: registry.npmmirror.com/vite/4.1.1
+      vite: registry.npmmirror.com/vite/4.1.1_sass@1.58.3
     transitivePeerDependencies:
       - '@types/node'
       - rollup
       - supports-color
+    dev: true
+
+  registry.npmmirror.com/vite-plugin-vue-setup-extend/0.4.0_vite@4.1.1:
+    resolution: {integrity: sha512-WMbjPCui75fboFoUTHhdbXzu4Y/bJMv5N9QT9a7do3wNMNHHqrk+Tn2jrSJU0LS5fGl/EG+FEDBYVUeWIkDqXQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite-plugin-vue-setup-extend/-/vite-plugin-vue-setup-extend-0.4.0.tgz}
+    id: registry.npmmirror.com/vite-plugin-vue-setup-extend/0.4.0
+    name: vite-plugin-vue-setup-extend
+    version: 0.4.0
+    peerDependencies:
+      vite: '>=2.0.0'
+    dependencies:
+      '@vue/compiler-sfc': registry.npmmirror.com/@vue/compiler-sfc/3.2.47
+      magic-string: registry.npmmirror.com/magic-string/0.25.9
+      vite: registry.npmmirror.com/vite/4.1.1_hlkwzk2izwsolfmdrejei4vrty
     dev: true
 
   registry.npmmirror.com/vite/4.1.1:
@@ -6173,6 +6213,43 @@ packages:
         optional: true
     dependencies:
       '@types/node': registry.npmmirror.com/@types/node/18.14.0
+      esbuild: registry.npmmirror.com/esbuild/0.16.17
+      postcss: registry.npmmirror.com/postcss/8.4.21
+      resolve: registry.npmmirror.com/resolve/1.22.1
+      rollup: registry.npmmirror.com/rollup/3.15.0
+      sass: registry.npmmirror.com/sass/1.58.3
+    optionalDependencies:
+      fsevents: registry.npmmirror.com/fsevents/2.3.2
+    dev: true
+
+  registry.npmmirror.com/vite/4.1.1_sass@1.58.3:
+    resolution: {integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.1.1.tgz}
+    id: registry.npmmirror.com/vite/4.1.1
+    name: vite
+    version: 4.1.1
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
       esbuild: registry.npmmirror.com/esbuild/0.16.17
       postcss: registry.npmmirror.com/postcss/8.4.21
       resolve: registry.npmmirror.com/resolve/1.22.1

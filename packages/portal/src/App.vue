@@ -1,6 +1,4 @@
-<script setup lang="ts">
-const a = ref(false)
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="container">
@@ -8,7 +6,6 @@ const a = ref(false)
     <div class="navi" />
     <div class="content">
       <RouterView />
-      <el-button />
     </div>
   </div>
 </template>

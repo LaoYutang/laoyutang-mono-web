@@ -5,4 +5,5 @@
 **/components.d.ts
 **/lib/*
 **/es/*
+**/build/*
 pnpm-lock.yaml

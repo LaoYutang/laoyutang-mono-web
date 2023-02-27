@@ -1,0 +1,38 @@
+{
+  "name": "components",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "node ./script/build.js"
+  },
+  "main": "./build/components.umd.js",
+  "module": "./build/components.mjs",
+  "types": "./build/index.d.ts",
+  "style": "./build/style.css",
+  "exports": {
+    ".": {
+      "require": "./build/components.umd.js",
+      "import": "./build/components.mjs",
+      "types": "./build/index.d.ts"
+    },
+    "./build/*": "./build/*/index.mjs",
+    "./build/*/style.css": "./build/*/style.css",
+    "./build/style.css": "./build/style.css",
+    "./*": "./*"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "fs-extra": "^11.1.0",
+    "sass": "^1.58.3",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vite-plugin-dts": "2.0.0-beta.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue-tsc": "^1.0.24"
+  }
+}

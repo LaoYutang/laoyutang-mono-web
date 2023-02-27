@@ -4,7 +4,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import * as path from 'path'
-import { UtilsImport } from 'imports'
+import { UtilsImport, ComponentsResolver } from 'imports'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
@@ -47,6 +47,7 @@ export default defineConfig({
           // alias: { park: 'icon-park' } 集合的别名
           // enabledCollections: ['ep'], // 这是可选的，默认启用 Iconify 支持的所有集合['mdi']
         }),
+        ComponentsResolver,
       ],
     }),
     Icons({ autoInstall: true, compiler: 'vue3' }),
