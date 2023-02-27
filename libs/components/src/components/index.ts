@@ -1,8 +1,10 @@
 import type { App } from 'vue'
 import CmButtom from './CmButton'
+import CmSvg from './CmSvg'
 export * from './CmButton'
+export * from './CmSvg'
 
-const components = [CmButtom]
+const components = [CmButtom, CmSvg]
 
 export default {
   install(app: App) {

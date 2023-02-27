@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <CmButton />
+    <CmSvg name="test" />
   </div>
 </template>
 

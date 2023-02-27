@@ -1,29 +1,57 @@
-import { defineComponent as c, ref as a, openBlock as r, createElementBlock as m } from "vue";
-const p = { class: "cm-button" }, l = c({
+import { defineComponent as s, ref as u, openBlock as l, createElementBlock as i, useCssVars as p, unref as _, computed as a, createElementVNode as f } from "vue";
+const v = { class: "cm-button" }, b = s({
   name: "cm-button"
-}), u = /* @__PURE__ */ c({
-  ...l,
+}), x = /* @__PURE__ */ s({
+  ...b,
   setup(t) {
-    return a("a"), (e, n) => (r(), m("div", p, "yige button"));
+    return u("a"), (e, n) => (l(), i("div", v, "yige button"));
   }
 });
-const f = (t, e) => {
+const m = (t, e) => {
   const n = t.__vccOpts || t;
-  for (const [s, _] of e)
-    n[s] = _;
+  for (const [o, c] of e)
+    n[o] = c;
   return n;
-}, o = /* @__PURE__ */ f(u, [["__scopeId", "data-v-291be8bf"]]), d = {
+}, r = /* @__PURE__ */ m(x, [["__scopeId", "data-v-291be8bf"]]), g = {
   install(t) {
-    t.component(o.name, o);
+    t.component(r.name, r);
   }
-}, i = [d], x = {
+}, h = {
+  "aria-hidden": "true",
+  class: "svg-icon"
+}, C = ["xlink:href"], y = s({
+  name: "CmSvg"
+}), S = /* @__PURE__ */ s({
+  ...y,
+  props: {
+    prefix: { default: "icon" },
+    name: null,
+    widthScale: { default: 1 }
+  },
+  setup(t) {
+    const e = t;
+    p((c) => ({
+      "29b5cb5c": _(o)
+    }));
+    const n = a(() => `#${e.prefix}-${e.name}`), o = a(() => e.widthScale.toString() + "em");
+    return (c, B) => (l(), i("svg", h, [
+      f("use", { "xlink:href": _(n) }, null, 8, C)
+    ]));
+  }
+});
+const d = /* @__PURE__ */ m(S, [["__scopeId", "data-v-85fad73b"]]), $ = {
   install(t) {
-    i.forEach((e) => {
+    t.component(d.name, d);
+  }
+}, k = [g, $], I = {
+  install(t) {
+    k.forEach((e) => {
       t.use(e);
     });
   }
 };
 export {
-  o as CmButton,
-  x as default
+  r as CmButton,
+  d as CmSvg,
+  I as default
 };
