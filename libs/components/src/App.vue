@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>App</div>
+  <div>
+    <CmButton />
+  </div>
 </template>
 
 <style scoped></style>

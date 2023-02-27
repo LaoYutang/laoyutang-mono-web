@@ -1,16 +1,39 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-// import dts from 'vite-plugin-dts'
+import * as path from 'path'
 import vueSetupExtend from 'vite-plugin-vue-setup-extend'
+import { ComponentsResolver } from 'imports'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
 
 export default defineConfig({
+  server: {
+    base: '/',
+    port: 8020, // 启动端口
+    strictPort: true, // 端口被占用尝试下一个端口
+    cors: true,
+    hmr: {
+      host: 'localhost',
+      port: 8020,
+    },
+  },
+  resolve: {
+    alias: {
+      // 设置别名
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
   plugins: [
     vue(),
     vueSetupExtend(),
-    // dts({
-    //   outputDir: ['./lib', './es'], // 声明文件输出目录
-    //   include: ['src/**/*.ts', 'src/**/*.vue'], // 包含的源文件
-    //   exclude: [], // 排除的源文件
-    // }),
+    AutoImport({
+      imports: ['vue', '@vueuse/core'],
+      dts: 'src/auto-imports.d.ts',
+      eslintrc: { enabled: true },
+    }),
+    Components({
+      dts: 'src/components.d.ts',
+      resolvers: [ComponentsResolver()],
+    }),
   ],
 })
