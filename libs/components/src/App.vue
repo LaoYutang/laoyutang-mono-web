@@ -1,9 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
-    <CmSvg name="test" />
-  </div>
+  <div>App</div>
 </template>
 
 <style scoped></style>

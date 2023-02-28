@@ -5,6 +5,9 @@ const { defineConfig, build } = require('vite')
 const vue = require('@vitejs/plugin-vue')
 const vueSetupExtend = require('vite-plugin-vue-setup-extend')
 const dts = require('vite-plugin-dts')
+const AutoImport = require('unplugin-auto-import/vite')
+const Components = require('unplugin-vue-components/vite')
+const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 
 const entryDir = path.resolve(__dirname, '../src/components')
 const outputDir = path.resolve(__dirname, '../build')
@@ -12,7 +15,20 @@ const outputDir = path.resolve(__dirname, '../build')
 const baseConfig = defineConfig({
   configFile: false,
   publicDir: false,
-  plugins: [vue(), dts(), vueSetupExtend()],
+  plugins: [
+    vue(),
+    AutoImport({
+      imports: ['vue', '@vueuse/core'],
+      dts: false,
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+      dts: false,
+    }),
+    dts(),
+    vueSetupExtend(),
+  ],
 })
 
 const rollupOptions = {

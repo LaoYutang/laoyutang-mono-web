@@ -1,11 +1,27 @@
 <script lang="ts" setup name="cm-button">
-import { ref } from 'vue'
+const props = withDefaults(
+  defineProps<{
+    handler: (e: Event) => Promise<any>
+  }>(),
+  {},
+)
 
-const a = ref('a')
+const loading = ref(false)
+
+// 按钮点击时间绑定
+const handleClock = async (e: Event) => {
+  loading.value = true
+  try {
+    await props.handler(e)
+  } catch (err) {}
+  loading.value = false
+}
 </script>
 
 <template>
-  <div class="cm-button">yige button</div>
+  <el-button v-bind="$attrs" :loading="loading" @click="handleClock">
+    <slot />
+  </el-button>
 </template>
 
 <style scoped src="./index.scss" />
