@@ -7,7 +7,7 @@
     "preinstall": "npx only-allow pnpm",
     "eslint": "eslint --ext .js,.vue --ignore-path .eslintignore --fix .",
     "prettier": "prettier --write .",
-    "commit": "git-cz"
+    "commit": "git add . && git-cz"
   },
   "keywords": [],
   "author": "ewen.zhang",

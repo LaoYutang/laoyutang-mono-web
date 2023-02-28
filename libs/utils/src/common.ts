@@ -76,3 +76,15 @@ export const _throttle = (
     }
   }
 }
+
+/**
+ * 延迟函数
+ * @param delay 延迟的时间
+ */
+export const _sleep = (delay: number) => {
+  return new Promise<void>((resolve) => {
+    setTimeout(() => {
+      resolve()
+    }, delay)
+  })
+}

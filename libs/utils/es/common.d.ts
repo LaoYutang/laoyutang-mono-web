@@ -26,3 +26,8 @@ export declare const _debounce: (fn: Function, delay?: number, immediate?: boole
  * @returns 节流函数
  */
 export declare const _throttle: (fn: Function, delay?: number, immediate?: boolean) => Function;
+/**
+ * 延迟函数
+ * @param delay 延迟的时间
+ */
+export declare const _sleep: (delay: number) => Promise<void>;
