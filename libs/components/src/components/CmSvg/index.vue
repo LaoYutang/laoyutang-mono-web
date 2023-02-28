@@ -5,8 +5,6 @@
 </template>
 
 <script lang="ts" setup name="CmSvg">
-import { computed, withDefaults } from 'vue'
-
 const props = withDefaults(
   defineProps<{
     prefix?: string
