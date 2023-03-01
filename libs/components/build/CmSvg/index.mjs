@@ -1,11 +1,11 @@
-import { defineComponent as r, useCssVars as d, unref as c, computed as _, openBlock as l, createElementBlock as i, createElementVNode as p } from "vue";
+import { defineComponent as r, useCssVars as l, unref as c, computed as a, openBlock as d, createElementBlock as i, createElementVNode as p } from "vue";
 const u = {
   "aria-hidden": "true",
   class: "svg-icon"
-}, f = ["xlink:href"], m = r({
+}, m = ["xlink:href"], f = r({
   name: "CmSvg"
 }), x = /* @__PURE__ */ r({
-  ...m,
+  ...f,
   props: {
     prefix: { default: "icon" },
     name: null,
@@ -13,12 +13,12 @@ const u = {
   },
   setup(e) {
     const t = e;
-    d((s) => ({
-      "29b5cb5c": c(o)
+    l((s) => ({
+      "88ae7cc6": c(o)
     }));
-    const n = _(() => `#${t.prefix}-${t.name}`), o = _(() => t.widthScale.toString() + "em");
-    return (s, h) => (l(), i("svg", u, [
-      p("use", { "xlink:href": c(n) }, null, 8, f)
+    const n = a(() => `#${t.prefix}-${t.name}`), o = a(() => t.widthScale.toString() + "em");
+    return (s, h) => (d(), i("svg", u, [
+      p("use", { "xlink:href": c(n) }, null, 8, m)
     ]));
   }
 });
@@ -27,12 +27,12 @@ const v = (e, t) => {
   for (const [o, s] of t)
     n[o] = s;
   return n;
-}, a = /* @__PURE__ */ v(x, [["__scopeId", "data-v-85fad73b"]]), b = {
+}, _ = /* @__PURE__ */ v(x, [["__scopeId", "data-v-5865a63a"]]), k = {
   install(e) {
-    e.component(a.name, a);
+    e.component(_.name, _);
   }
 };
 export {
-  a as CmSvg,
-  b as default
+  _ as CmSvg,
+  k as default
 };

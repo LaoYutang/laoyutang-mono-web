@@ -5,6 +5,14 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const _Request: typeof import('utils')['_Request']
+  const _Stack: typeof import('utils')['_Stack']
+  const _debounce: typeof import('utils')['_debounce']
+  const _deepClone: typeof import('utils')['_deepClone']
+  const _getVarType: typeof import('utils')['_getVarType']
+  const _isPrimitVar: typeof import('utils')['_isPrimitVar']
+  const _sleep: typeof import('utils')['_sleep']
+  const _throttle: typeof import('utils')['_throttle']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const computed: typeof import('vue')['computed']

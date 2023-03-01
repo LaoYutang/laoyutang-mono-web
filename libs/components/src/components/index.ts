@@ -1,10 +1,18 @@
 import type { App } from 'vue'
-import CmButtom from './CmButton'
-import CmSvg from './CmSvg'
 export * from './CmButton'
 export * from './CmSvg'
+export * from './CmTable'
 
-const components = [CmButtom, CmSvg]
+const components: any[] = []
+const modules = import.meta.glob('./*/index.ts')
+
+const importComponents = async () => {
+  for (const module of Object.values(modules)) {
+    const imports = (await module()) as { [attr: string]: any }
+    components.push(imports.default)
+  }
+}
+importComponents()
 
 export default {
   install(app: App) {

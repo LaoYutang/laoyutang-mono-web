@@ -11,7 +11,9 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CmButton: typeof import('components/build/CmButton')['CmButton']
     CmSvg: typeof import('components/build/CmSvg')['CmSvg']
+    CmTable: typeof import('components/build/CmTable')['CmTable']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     IconEpFold: typeof import('~icons/ep/fold')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

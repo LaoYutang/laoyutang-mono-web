@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import * as path from 'path'
 import vueSetupExtend from 'vite-plugin-vue-setup-extend'
-import { ComponentsResolver } from 'imports'
+import { ComponentsResolver, UtilsImport } from 'imports'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -28,7 +28,7 @@ export default defineConfig({
     vue(),
     vueSetupExtend(),
     AutoImport({
-      imports: ['vue', '@vueuse/core'],
+      imports: ['vue', '@vueuse/core', UtilsImport()],
       dts: 'src/components/auto-imports.d.ts',
       eslintrc: { enabled: true },
       resolvers: [ElementPlusResolver()],

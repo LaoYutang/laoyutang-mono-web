@@ -8,6 +8,7 @@ const dts = require('vite-plugin-dts')
 const AutoImport = require('unplugin-auto-import/vite')
 const Components = require('unplugin-vue-components/vite')
 const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
+const { UtilsImport } = require('imports')
 
 const entryDir = path.resolve(__dirname, '../src/components')
 const outputDir = path.resolve(__dirname, '../build')
@@ -18,7 +19,7 @@ const baseConfig = defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ['vue', '@vueuse/core'],
+      imports: ['vue', '@vueuse/core', UtilsImport()],
       dts: false,
       resolvers: [ElementPlusResolver()],
     }),

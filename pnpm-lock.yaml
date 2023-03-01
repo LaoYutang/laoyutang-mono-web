@@ -50,6 +50,7 @@ importers:
       typescript: ^4.9.3
       unplugin-auto-import: ^0.14.3
       unplugin-vue-components: ^0.24.0
+      utils: workspace:*
       vite: ^4.1.0
       vite-plugin-dts: 2.0.0-beta.0
       vite-plugin-vue-setup-extend: ^0.4.0
@@ -58,6 +59,7 @@ importers:
     dependencies:
       '@vueuse/core': registry.npmmirror.com/@vueuse/core/9.13.0_vue@3.2.47
       element-plus: registry.npmmirror.com/element-plus/2.2.32_vue@3.2.47
+      utils: link:../utils
       vue: registry.npmmirror.com/vue/3.2.47
     devDependencies:
       '@types/node': registry.npmmirror.com/@types/node/18.14.0

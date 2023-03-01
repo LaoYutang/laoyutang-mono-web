@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=(t="utils")=>({[t]:["_getVarType","_isPrimitVar","_debounce","_throttle","_Stack","_deepClone","_Request"]});exports.UtilsImport=e;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=(e="utils")=>({[e]:["_getVarType","_isPrimitVar","_debounce","_throttle","_Stack","_deepClone","_Request","_sleep"]});exports.UtilsImport=t;

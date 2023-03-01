@@ -12,6 +12,7 @@ declare global {
   const _getVarType: typeof import('utils')['_getVarType']
   const _isPrimitVar: typeof import('utils')['_isPrimitVar']
   const _request: typeof import('./utils/request-main')['_request']
+  const _sleep: typeof import('utils')['_sleep']
   const _throttle: typeof import('utils')['_throttle']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']

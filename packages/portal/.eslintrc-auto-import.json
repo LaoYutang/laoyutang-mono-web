@@ -15,6 +15,7 @@
     "_getVarType": true,
     "_isPrimitVar": true,
     "_request": true,
+    "_sleep": true,
     "_throttle": true,
     "acceptHMRUpdate": true,
     "asyncComputed": true,

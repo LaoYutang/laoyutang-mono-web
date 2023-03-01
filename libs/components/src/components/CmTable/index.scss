@@ -1,0 +1,25 @@
+.cm-table {
+  $button-height: 40px;
+  $pager-height: 40px;
+
+  width: 100%;
+
+  // 顶部按钮组插槽
+  .buttons {
+    height: $button-height;
+    display: flex;
+    align-items: center;
+  }
+
+  // 中间表格主体
+  .table {
+  }
+
+  // 分页部分
+  .pager {
+    height: $pager-height;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

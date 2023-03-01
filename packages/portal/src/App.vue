@@ -1,21 +1,10 @@
-<script setup lang="ts">
-const handler = async () => {
-  console.log(111)
-  await new Promise<void>((resolve) => {
-    setTimeout(() => {
-      resolve()
-    }, 2000)
-  })
-  return Promise.resolve()
-}
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="container">
     <div class="menu" />
     <div class="navi" />
     <div class="content">
-      <CmButton :handler="handler">test</CmButton>
       <RouterView />
     </div>
   </div>

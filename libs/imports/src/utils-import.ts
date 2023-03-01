@@ -8,6 +8,7 @@ export const UtilsImport = (path: string = 'utils') => {
       '_Stack',
       '_deepClone',
       '_Request',
+      '_sleep',
     ],
   }
 }
