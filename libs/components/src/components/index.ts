@@ -2,14 +2,17 @@ import type { App } from 'vue'
 export * from './CmButton'
 export * from './CmSvg'
 export * from './CmTable'
+export * from './CmInput'
 
 const components: any[] = []
-const modules = import.meta.glob('./*/index.ts')
+const modules = import.meta.glob('./*/index.ts', { eager: true }) as Record<
+  string,
+  { [attr: string]: any }
+>
 
 const importComponents = async () => {
   for (const module of Object.values(modules)) {
-    const imports = (await module()) as { [attr: string]: any }
-    components.push(imports.default)
+    components.push(module.default)
   }
 }
 importComponents()

@@ -10,9 +10,12 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CmButton: typeof import('./CmButton/index.vue')['default']
+    CmInput: typeof import('./CmInput/index.vue')['default']
     CmSvg: typeof import('./CmSvg/index.vue')['default']
     CmTable: typeof import('./CmTable/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElInput: typeof import('element-plus/es')['ElInput']
+    ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
     ElPagination: typeof import('element-plus/es')['ElPagination']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
