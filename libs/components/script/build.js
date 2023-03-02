@@ -33,7 +33,7 @@ const baseConfig = defineConfig({
 })
 
 const rollupOptions = {
-  external: ['vue', 'element-plus/es'],
+  external: ['vue', 'element-plus/es', 'utils'],
   output: {
     globals: {
       vue: 'Vue',
@@ -53,7 +53,7 @@ const buildAll = async () => {
           entry: path.resolve(entryDir, 'index.ts'),
           name: 'components',
           fileName: 'components',
-          formats: ['es', 'umd'],
+          formats: ['es', 'cjs'],
         },
         outDir: outputDir,
       },
@@ -73,7 +73,7 @@ const buildSingle = async (name) => {
           entry: path.resolve(entryDir, name),
           name: 'index',
           fileName: 'index',
-          formats: ['es', 'umd'],
+          formats: ['es', 'cjs'],
         },
         outDir: path.resolve(outputDir, name),
       },
@@ -86,7 +86,7 @@ const createPackageJson = (name) => {
   const fileStr = `{
   "name": "${name}",
   "version": "0.0.0",
-  "main": "index.umd.js",
+  "main": "index.js",
   "module": "index.mjs",
   "style": "style.css",
   "types": "index.d.ts"

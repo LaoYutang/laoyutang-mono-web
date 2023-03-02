@@ -6,13 +6,13 @@
     "dev": "vite",
     "build": "node ./script/build.js"
   },
-  "main": "./build/components.umd.js",
+  "main": "./build/components.js",
   "module": "./build/components.mjs",
   "types": "./build/index.d.ts",
   "style": "./build/style.css",
   "exports": {
     ".": {
-      "require": "./build/components.umd.js",
+      "require": "./build/components.js",
       "import": "./build/components.mjs",
       "types": "./build/index.d.ts"
     },
@@ -20,6 +20,11 @@
     "./build/*/style.css": "./build/*/style.css",
     "./build/style.css": "./build/style.css",
     "./*": "./*"
+  },
+  "peerDependencies": {
+    "vue": ">=3.2.45",
+    "element-plus": ">=2.2.32",
+    "utils": "workspace:*"
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
