@@ -37,7 +37,8 @@
   "lint-staged": {
     "*.{js,ts,jsx,tsx,vue,json}": [
       "pnpm eslint",
-      "pnpm prettier"
+      "pnpm prettier",
+      "git add ."
     ]
   }
 }
