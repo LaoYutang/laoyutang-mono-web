@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+</script>
 
 <template>
-  <div />
+  <el-config-provider :locale="zhCn">App</el-config-provider>
 </template>
 
 <style scoped></style>

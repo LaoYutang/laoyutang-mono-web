@@ -1,47 +1,48 @@
-import { ElButton as _ } from "element-plus/es";
-import { defineComponent as a, ref as u, openBlock as d, createBlock as p, mergeProps as i, unref as f, withCtx as m, renderSlot as v } from "vue";
-const g = a({
+import { ElButton as d } from "element-plus/es";
+import { defineComponent as a, ref as f, openBlock as u, createBlock as p, mergeProps as i, unref as c, withCtx as m, renderSlot as v } from "vue";
+import { _debounce as g } from "utils";
+const h = a({
   name: "cm-button"
-}), h = /* @__PURE__ */ a({
-  ...g,
+}), k = /* @__PURE__ */ a({
+  ...h,
   props: {
     handler: null
   },
   setup(t) {
-    const o = t, e = u(!1), c = async (n) => {
-      e.value = !0;
+    const n = t, o = f(!1), s = g(async (e) => {
+      o.value = !0;
       try {
-        await o.handler(n);
+        await n.handler(e);
       } catch {
       }
-      e.value = !1;
-    };
-    return (n, r) => {
-      const l = _;
-      return d(), p(l, i(n.$attrs, {
-        loading: f(e),
-        onClick: c
+      o.value = !1;
+    });
+    return (e, l) => {
+      const _ = d;
+      return u(), p(_, i(e.$attrs, {
+        loading: c(o),
+        onClick: c(s)
       }), {
         default: m(() => [
-          v(n.$slots, "default", {}, void 0, !0)
+          v(e.$slots, "default", {}, void 0, !0)
         ]),
         _: 3
         /* FORWARDED */
-      }, 16, ["loading"]);
+      }, 16, ["loading", "onClick"]);
     };
   }
 });
-const k = (t, o) => {
-  const e = t.__vccOpts || t;
-  for (const [c, n] of o)
-    e[c] = n;
-  return e;
-}, s = /* @__PURE__ */ k(h, [["__scopeId", "data-v-5e79745c"]]), B = {
+const C = (t, n) => {
+  const o = t.__vccOpts || t;
+  for (const [s, e] of n)
+    o[s] = e;
+  return o;
+}, r = /* @__PURE__ */ C(k, [["__scopeId", "data-v-68fd51f0"]]), b = {
   install(t) {
-    t.component(s.name, s);
+    t.component(r.name, r);
   }
 };
 export {
-  s as CmButton,
-  B as default
+  r as CmButton,
+  b as default
 };

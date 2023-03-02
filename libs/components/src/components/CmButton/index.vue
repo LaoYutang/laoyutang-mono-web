@@ -9,13 +9,13 @@ const props = withDefaults(
 const loading = ref(false)
 
 // 按钮点击时间绑定
-const handleClock = async (e: Event) => {
+const handleClock = _debounce(async (e: Event) => {
   loading.value = true
   try {
     await props.handler(e)
   } catch (err) {}
   loading.value = false
-}
+})
 </script>
 
 <template>

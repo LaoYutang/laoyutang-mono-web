@@ -1,34 +1,34 @@
 import { ElButton as G, ElInput as W, ElInputNumber as q, ElTableColumn as A, ElTable as F, ElPagination as H, ElLoadingDirective as J } from "element-plus/es";
-import { defineComponent as _, ref as i, openBlock as p, createBlock as b, mergeProps as v, unref as a, withCtx as j, renderSlot as C, normalizeProps as K, useCssVars as Q, computed as T, createElementBlock as E, createElementVNode as f, reactive as O, watch as z, withDirectives as R, createCommentVNode as g, createVNode as B } from "vue";
-import { _deepClone as X } from "utils";
-const Y = _({
+import { defineComponent as _, ref as i, openBlock as p, createBlock as b, mergeProps as v, unref as a, withCtx as j, renderSlot as C, normalizeProps as K, useCssVars as Q, computed as T, createElementBlock as E, createElementVNode as g, reactive as O, watch as z, withDirectives as R, createCommentVNode as f, createVNode as B } from "vue";
+import { _debounce as X, _deepClone as Y } from "utils";
+const Z = _({
   name: "cm-button"
-}), Z = /* @__PURE__ */ _({
-  ...Y,
+}), ee = /* @__PURE__ */ _({
+  ...Z,
   props: {
     handler: null
   },
   setup(e) {
-    const n = e, t = i(!1), s = async (o) => {
+    const n = e, t = i(!1), s = X(async (o) => {
       t.value = !0;
       try {
         await n.handler(o);
       } catch {
       }
       t.value = !1;
-    };
+    });
     return (o, c) => {
       const l = G;
       return p(), b(l, v(o.$attrs, {
         loading: a(t),
-        onClick: s
+        onClick: a(s)
       }), {
         default: j(() => [
           C(o.$slots, "default", {}, void 0, !0)
         ]),
         _: 3
         /* FORWARDED */
-      }, 16, ["loading"]);
+      }, 16, ["loading", "onClick"]);
     };
   }
 });
@@ -37,19 +37,19 @@ const k = (e, n) => {
   for (const [s, o] of n)
     t[s] = o;
   return t;
-}, x = /* @__PURE__ */ k(Z, [["__scopeId", "data-v-5e79745c"]]), ee = {
+}, x = /* @__PURE__ */ k(ee, [["__scopeId", "data-v-68fd51f0"]]), te = {
   install(e) {
     e.component(x.name, x);
   }
-}, te = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, ne = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   CmButton: x,
-  default: ee
+  default: te
 }, Symbol.toStringTag, { value: "Module" }));
-const ne = _({
+const oe = _({
   name: "CmInput"
 }), S = /* @__PURE__ */ _({
-  ...ne,
+  ...oe,
   props: {
     type: { default: "text" }
   },
@@ -69,21 +69,21 @@ const ne = _({
       ));
     };
   }
-}), oe = {
+}), ae = {
   install(e) {
     e.component(S.name, S);
   }
-}, ae = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, le = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   CmInput: S,
-  default: oe
-}, Symbol.toStringTag, { value: "Module" })), le = {
+  default: ae
+}, Symbol.toStringTag, { value: "Module" })), se = {
   "aria-hidden": "true",
   class: "svg-icon"
-}, se = ["xlink:href"], ce = _({
+}, ce = ["xlink:href"], re = _({
   name: "CmSvg"
-}), re = /* @__PURE__ */ _({
-  ...ce,
+}), _e = /* @__PURE__ */ _({
+  ...re,
   props: {
     prefix: { default: "icon" },
     name: null,
@@ -95,23 +95,23 @@ const ne = _({
       "88ae7cc6": a(s)
     }));
     const t = T(() => `#${n.prefix}-${n.name}`), s = T(() => n.widthScale.toString() + "em");
-    return (o, c) => (p(), E("svg", le, [
-      f("use", { "xlink:href": a(t) }, null, 8, se)
+    return (o, c) => (p(), E("svg", se, [
+      g("use", { "xlink:href": a(t) }, null, 8, ce)
     ]));
   }
 });
-const $ = /* @__PURE__ */ k(re, [["__scopeId", "data-v-5865a63a"]]), _e = {
+const $ = /* @__PURE__ */ k(_e, [["__scopeId", "data-v-5865a63a"]]), ie = {
   install(e) {
     e.component($.name, $);
   }
-}, ie = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, ue = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   CmSvg: $,
-  default: _e
+  default: ie
 }, Symbol.toStringTag, { value: "Module" }));
-const ue = { class: "cm-table" }, pe = { class: "buttons" }, de = { class: "table" }, me = { class: "pager" }, ge = _({
+const pe = { class: "cm-table" }, de = { class: "buttons" }, me = { class: "table" }, fe = { class: "pager" }, ge = _({
   name: "CmTable"
-}), fe = /* @__PURE__ */ _({
+}), be = /* @__PURE__ */ _({
   ...ge,
   props: {
     getData: null,
@@ -124,7 +124,7 @@ const ue = { class: "cm-table" }, pe = { class: "buttons" }, de = { class: "tabl
     const t = e, s = i([]), o = i(!1), c = i({}), l = O({
       pageSize: 20,
       currentPage: 1
-    }), I = i(0), w = i(null), d = (r, u = !0) => (r && (c.value = X(r)), u && (l.currentPage = 1), t.isUsePager && (c.value.pager = l), o.value = !0, t.getData(c).then((m) => {
+    }), I = i(0), w = i(null), d = (r, u = !0) => (r && (c.value = Y(r)), u && (l.currentPage = 1), t.isUsePager && (c.value.pager = l), o.value = !0, t.getData(c).then((m) => {
       s.value = m.datas, I.value = m.total;
     }).catch().finally(() => {
       o.value = !1;
@@ -149,13 +149,13 @@ const ue = { class: "cm-table" }, pe = { class: "buttons" }, de = { class: "tabl
       test: N
     }), (r, u) => {
       const m = A, M = F, V = H, L = J;
-      return R((p(), E("div", ue, [
-        g(" 操作按钮组 "),
-        f("div", pe, [
+      return R((p(), E("div", pe, [
+        f(" 操作按钮组 "),
+        g("div", de, [
           C(r.$slots, "buttons", { selection: a(y) }, void 0, !0)
         ]),
-        g(" 表格主体 "),
-        f("div", de, [
+        f(" 表格主体 "),
+        g("div", me, [
           B(M, v({
             ref_key: "table",
             ref: w
@@ -167,15 +167,15 @@ const ue = { class: "cm-table" }, pe = { class: "buttons" }, de = { class: "tabl
               t.isUseCheckBox ? (p(), b(m, {
                 key: 0,
                 type: "selection"
-              })) : g("v-if", !0),
+              })) : f("v-if", !0),
               C(r.$slots, "default", {}, void 0, !0)
             ]),
             _: 3
             /* FORWARDED */
           }, 16, ["data"])
         ]),
-        g(" 分页部分 "),
-        f("div", me, [
+        f(" 分页部分 "),
+        g("div", fe, [
           B(V, {
             "page-size": a(l).pageSize,
             "onUpdate:pageSize": u[0] || (u[0] = (h) => a(l).pageSize = h),
@@ -193,20 +193,20 @@ const ue = { class: "cm-table" }, pe = { class: "buttons" }, de = { class: "tabl
     };
   }
 });
-const P = /* @__PURE__ */ k(fe, [["__scopeId", "data-v-175e1406"]]), be = {
+const P = /* @__PURE__ */ k(be, [["__scopeId", "data-v-175e1406"]]), ve = {
   install(e) {
     e.component(P.name, P);
   }
-}, ve = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, ye = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   CmTable: P,
-  default: be
-}, Symbol.toStringTag, { value: "Module" })), D = [], ye = /* @__PURE__ */ Object.assign({ "./CmButton/index.ts": te, "./CmInput/index.ts": ae, "./CmSvg/index.ts": ie, "./CmTable/index.ts": ve }), he = async () => {
-  for (const e of Object.values(ye))
+  default: ve
+}, Symbol.toStringTag, { value: "Module" })), D = [], he = /* @__PURE__ */ Object.assign({ "./CmButton/index.ts": ne, "./CmInput/index.ts": le, "./CmSvg/index.ts": ue, "./CmTable/index.ts": ye }), Ce = async () => {
+  for (const e of Object.values(he))
     D.push(e.default);
 };
-he();
-const $e = {
+Ce();
+const Pe = {
   install(e) {
     D.forEach((n) => {
       e.use(n);
@@ -218,5 +218,5 @@ export {
   S as CmInput,
   $ as CmSvg,
   P as CmTable,
-  $e as default
+  Pe as default
 };

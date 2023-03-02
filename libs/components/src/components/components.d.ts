@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     CmSvg: typeof import('./CmSvg/index.vue')['default']
     CmTable: typeof import('./CmTable/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
     ElPagination: typeof import('element-plus/es')['ElPagination']
