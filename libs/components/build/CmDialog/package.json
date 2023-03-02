@@ -1,0 +1,8 @@
+{
+  "name": "CmDialog",
+  "version": "0.0.0",
+  "main": "index.js",
+  "module": "index.mjs",
+  "style": "style.css",
+  "types": "index.d.ts"
+}

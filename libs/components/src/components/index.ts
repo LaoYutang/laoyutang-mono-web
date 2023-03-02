@@ -3,6 +3,7 @@ export * from './CmSvg'
 export * from './CmTable'
 export * from './CmInput'
 export * from './CmSelect'
+export * from './CmDialog'
 
 import type { App } from 'vue'
 

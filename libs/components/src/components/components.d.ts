@@ -10,12 +10,14 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CmButton: typeof import('./CmButton/index.vue')['default']
+    CmDialog: typeof import('components/build/CmDialog')['CmDialog']
     CmInput: typeof import('./CmInput/index.vue')['default']
     CmSelect: typeof import('./CmSelect/index.vue')['default']
     CmSvg: typeof import('./CmSvg/index.vue')['default']
     CmTable: typeof import('./CmTable/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
+    ElDialog: typeof import('element-plus/es')['ElDialog']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
     ElOption: typeof import('element-plus/es')['ElOption']
@@ -26,6 +28,7 @@ declare module '@vue/runtime-core' {
     ElTreeSelect: typeof import('element-plus/es')['ElTreeSelect']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Test: typeof import('./test.vue')['default']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']
