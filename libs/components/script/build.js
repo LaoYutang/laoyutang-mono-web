@@ -33,7 +33,7 @@ const baseConfig = defineConfig({
 })
 
 const rollupOptions = {
-  external: ['vue'],
+  external: ['vue', 'element-plus/es'],
   output: {
     globals: {
       vue: 'Vue',
