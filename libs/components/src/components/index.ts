@@ -1,8 +1,10 @@
-import type { App } from 'vue'
 export * from './CmButton'
 export * from './CmSvg'
 export * from './CmTable'
 export * from './CmInput'
+export * from './CmSelect'
+
+import type { App } from 'vue'
 
 const components: any[] = []
 const modules = import.meta.glob('./*/index.ts', { eager: true }) as Record<

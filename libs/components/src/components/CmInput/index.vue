@@ -14,7 +14,15 @@ const props = withDefaults(
     v-bind="$attrs"
     :type="props.type"
     clearable
-  />
+  >
+    <template
+      v-for="(v, slotName) in $slots"
+      :key="slotName"
+      #[slotName]="datas"
+    >
+      <slot :name="slotName" v-bind="datas" />
+    </template>
+  </el-input>
 
   <el-input-number v-else v-bind="$attrs" />
 </template>

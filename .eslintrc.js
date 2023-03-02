@@ -127,7 +127,7 @@ module.exports = {
       },
     ],
     'vue/no-unused-vars': 2, // 变量定义必须使用
-    'vue/object-curly-spacing': 2, // 对象空格一致
+    'vue/object-curly-spacing': 0, // 对象空格一致 与prettier规则冲突 关闭
     'vue/prop-name-casing': ['error', 'camelCase'], // prop属性采用小驼峰
     'vue/require-v-for-key': 2, // vfor必须有key属性
     'vue/require-valid-default-prop': 2, // prop默认值属性需要匹配

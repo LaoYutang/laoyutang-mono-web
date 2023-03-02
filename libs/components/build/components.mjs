@@ -1,30 +1,30 @@
-import { ElButton as G, ElInput as W, ElInputNumber as q, ElTableColumn as A, ElTable as F, ElPagination as H, ElLoadingDirective as J } from "element-plus/es";
-import { defineComponent as _, ref as i, openBlock as p, createBlock as b, mergeProps as v, unref as a, withCtx as j, renderSlot as C, normalizeProps as K, useCssVars as Q, computed as T, createElementBlock as E, createElementVNode as g, reactive as O, watch as z, withDirectives as R, createCommentVNode as f, createVNode as B } from "vue";
-import { _debounce as X, _deepClone as Y } from "utils";
-const Z = _({
+import { ElButton as q, ElInput as A, ElInputNumber as H, ElOption as J, ElSelect as K, ElTreeSelect as Q, ElTableColumn as X, ElTable as Y, ElPagination as Z, ElLoadingDirective as ee } from "element-plus/es";
+import { defineComponent as i, ref as p, openBlock as _, createBlock as b, mergeProps as y, unref as a, withCtx as v, renderSlot as S, createSlots as te, renderList as N, normalizeProps as D, guardReactiveProps as ne, watch as O, createElementBlock as C, Fragment as T, createCommentVNode as m, createVNode as I, useCssVars as oe, computed as U, createElementVNode as x, reactive as M, withDirectives as le } from "vue";
+import { _debounce as ae, _deepClone as se } from "utils";
+const ce = i({
   name: "cm-button"
-}), ee = /* @__PURE__ */ _({
-  ...Z,
+}), re = /* @__PURE__ */ i({
+  ...ce,
   props: {
     handler: null
   },
-  setup(e) {
-    const n = e, t = i(!1), s = X(async (o) => {
-      t.value = !0;
+  setup(t) {
+    const l = t, e = p(!1), s = ae(async (o) => {
+      e.value = !0;
       try {
-        await n.handler(o);
+        await l.handler(o);
       } catch {
       }
-      t.value = !1;
+      e.value = !1;
     });
-    return (o, c) => {
-      const l = G;
-      return p(), b(l, v(o.$attrs, {
-        loading: a(t),
+    return (o, u) => {
+      const n = q;
+      return _(), b(n, y(o.$attrs, {
+        loading: a(e),
         onClick: a(s)
       }), {
-        default: j(() => [
-          C(o.$slots, "default", {}, void 0, !0)
+        default: v(() => [
+          S(o.$slots, "default", {}, void 0, !0)
         ]),
         _: 3
         /* FORWARDED */
@@ -32,87 +32,190 @@ const Z = _({
     };
   }
 });
-const k = (e, n) => {
-  const t = e.__vccOpts || e;
-  for (const [s, o] of n)
-    t[s] = o;
-  return t;
-}, x = /* @__PURE__ */ k(ee, [["__scopeId", "data-v-68fd51f0"]]), te = {
-  install(e) {
-    e.component(x.name, x);
+const w = (t, l) => {
+  const e = t.__vccOpts || t;
+  for (const [s, o] of l)
+    e[s] = o;
+  return e;
+}, z = /* @__PURE__ */ w(re, [["__scopeId", "data-v-68fd51f0"]]), ue = {
+  install(t) {
+    t.component(z.name, z);
   }
-}, ne = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, _e = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  CmButton: x,
-  default: te
+  CmButton: z,
+  default: ue
 }, Symbol.toStringTag, { value: "Module" }));
-const oe = _({
+const ie = i({
   name: "CmInput"
-}), S = /* @__PURE__ */ _({
-  ...oe,
+}), B = /* @__PURE__ */ i({
+  ...ie,
   props: {
     type: { default: "text" }
   },
-  setup(e) {
-    const n = e;
-    return (t, s) => {
-      const o = W, c = q;
-      return n.type !== "number" ? (p(), b(o, v({ key: 0 }, t.$attrs, {
-        type: n.type,
+  setup(t) {
+    const l = t;
+    return (e, s) => {
+      const o = A, u = H;
+      return l.type !== "number" ? (_(), b(o, y({ key: 0 }, e.$attrs, {
+        type: l.type,
         clearable: ""
-      }), null, 16, ["type"])) : (p(), b(
-        c,
-        K(v({ key: 1 }, t.$attrs)),
+      }), te({
+        _: 2
+        /* DYNAMIC */
+      }, [
+        N(e.$slots, (n, c) => ({
+          name: c,
+          fn: v((h) => [
+            S(e.$slots, c, D(ne(h)))
+          ])
+        }))
+      ]), 1040, ["type"])) : (_(), b(
+        u,
+        D(y({ key: 1 }, e.$attrs)),
         null,
         16
         /* FULL_PROPS */
       ));
     };
   }
-}), ae = {
-  install(e) {
-    e.component(S.name, S);
+}), pe = {
+  install(t) {
+    t.component(B.name, B);
   }
-}, le = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, de = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  CmInput: S,
-  default: ae
-}, Symbol.toStringTag, { value: "Module" })), se = {
+  CmInput: B,
+  default: pe
+}, Symbol.toStringTag, { value: "Module" }));
+const me = i({
+  name: "CmSelect"
+}), E = /* @__PURE__ */ i({
+  ...me,
+  props: {
+    type: { default: "normal" },
+    getData: null,
+    params: { default: "" },
+    multiple: { type: Boolean, default: !1 }
+  },
+  emits: ["update:modelValue"],
+  setup(t, { emit: l }) {
+    const e = t, s = p([]), o = p(!1), u = (n) => {
+      o.value = !0, e.getData(n).then((c) => {
+        s.value = c;
+      }).finally(() => {
+        o.value = !1;
+      });
+    };
+    return u(e.params), O(
+      () => e.params,
+      () => {
+        l("update:modelValue", null), u(e.params);
+      }
+    ), (n, c) => {
+      const h = J, f = K, $ = Q;
+      return _(), C(
+        T,
+        null,
+        [
+          m(" 普通下拉框 "),
+          e.type === "normal" ? (_(), b(f, y({ key: 0 }, n.$attrs, {
+            multiple: e.multiple,
+            "show-checkbox": !1,
+            "onUpdate:modelValue": c[0] || (c[0] = (r) => n.$emit("update:modelValue", r))
+          }), {
+            default: v(() => [
+              (_(!0), C(
+                T,
+                null,
+                N(a(s), (r) => (_(), b(h, {
+                  key: r.value,
+                  label: r.label,
+                  value: r.value
+                }, {
+                  default: v(() => [
+                    S(n.$slots, "default", { data: r })
+                  ]),
+                  _: 2
+                  /* DYNAMIC */
+                }, 1032, ["label", "value"]))),
+                128
+                /* KEYED_FRAGMENT */
+              ))
+            ]),
+            _: 3
+            /* FORWARDED */
+          }, 16, ["multiple"])) : e.type === "tree" ? (_(), C(
+            T,
+            { key: 1 },
+            [
+              m(" 树形下拉框 "),
+              I($, y(n.$attrs, {
+                data: a(s),
+                multiple: e.multiple,
+                "show-checkbox": e.multiple,
+                "onUpdate:modelValue": c[1] || (c[1] = (r) => n.$emit("update:modelValue", r))
+              }), {
+                default: v(({ data: r }) => [
+                  S(n.$slots, "default", { data: r })
+                ]),
+                _: 3
+                /* FORWARDED */
+              }, 16, ["data", "multiple", "show-checkbox"])
+            ],
+            2112
+            /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+          )) : m("v-if", !0)
+        ],
+        2112
+        /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+      );
+    };
+  }
+}), fe = {
+  install(t) {
+    t.component(E.name, E);
+  }
+}, ge = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  CmSelect: E,
+  default: fe
+}, Symbol.toStringTag, { value: "Module" })), ve = {
   "aria-hidden": "true",
   class: "svg-icon"
-}, ce = ["xlink:href"], re = _({
+}, be = ["xlink:href"], ye = i({
   name: "CmSvg"
-}), _e = /* @__PURE__ */ _({
-  ...re,
+}), Se = /* @__PURE__ */ i({
+  ...ye,
   props: {
     prefix: { default: "icon" },
     name: null,
     widthScale: { default: 1 }
   },
-  setup(e) {
-    const n = e;
-    Q((o) => ({
+  setup(t) {
+    const l = t;
+    oe((o) => ({
       "88ae7cc6": a(s)
     }));
-    const t = T(() => `#${n.prefix}-${n.name}`), s = T(() => n.widthScale.toString() + "em");
-    return (o, c) => (p(), E("svg", se, [
-      g("use", { "xlink:href": a(t) }, null, 8, ce)
+    const e = U(() => `#${l.prefix}-${l.name}`), s = U(() => l.widthScale.toString() + "em");
+    return (o, u) => (_(), C("svg", ve, [
+      x("use", { "xlink:href": a(e) }, null, 8, be)
     ]));
   }
 });
-const $ = /* @__PURE__ */ k(_e, [["__scopeId", "data-v-5865a63a"]]), ie = {
-  install(e) {
-    e.component($.name, $);
+const j = /* @__PURE__ */ w(Se, [["__scopeId", "data-v-5865a63a"]]), he = {
+  install(t) {
+    t.component(j.name, j);
   }
-}, ue = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, $e = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  CmSvg: $,
-  default: ie
+  CmSvg: j,
+  default: he
 }, Symbol.toStringTag, { value: "Module" }));
-const pe = { class: "cm-table" }, de = { class: "buttons" }, me = { class: "table" }, fe = { class: "pager" }, ge = _({
+const Ce = { class: "cm-table" }, ke = { class: "buttons" }, xe = { class: "table" }, Pe = { class: "pager" }, Te = i({
   name: "CmTable"
-}), be = /* @__PURE__ */ _({
-  ...ge,
+}), Oe = /* @__PURE__ */ i({
+  ...Te,
   props: {
     getData: null,
     isInitData: { type: Boolean, default: !0 },
@@ -120,103 +223,104 @@ const pe = { class: "cm-table" }, de = { class: "buttons" }, me = { class: "tabl
     isUsePager: { type: Boolean, default: !0 },
     isUseCheckBox: { type: Boolean, default: !0 }
   },
-  setup(e, { expose: n }) {
-    const t = e, s = i([]), o = i(!1), c = i({}), l = O({
+  setup(t, { expose: l }) {
+    const e = t, s = p([]), o = p(!1), u = p({}), n = M({
       pageSize: 20,
       currentPage: 1
-    }), I = i(0), w = i(null), d = (r, u = !0) => (r && (c.value = Y(r)), u && (l.currentPage = 1), t.isUsePager && (c.value.pager = l), o.value = !0, t.getData(c).then((m) => {
-      s.value = m.datas, I.value = m.total;
+    }), c = p(0), h = p(null), f = (d, g = !0) => (d && (u.value = se(d)), g && (n.currentPage = 1), e.isUsePager && (u.value.pager = n), o.value = !0, e.getData(u).then((k) => {
+      s.value = k.datas, c.value = k.total;
     }).catch().finally(() => {
       o.value = !1;
     }));
-    t.isInitData && d(t.initParams), z(
-      () => l.currentPage,
+    e.isInitData && f(e.initParams), O(
+      () => n.currentPage,
       () => {
-        d(null, !1);
+        f(null, !1);
       }
-    ), z(
-      () => l.pageSize,
+    ), O(
+      () => n.pageSize,
       () => {
-        d();
+        f();
       }
     );
-    const y = i([]), U = (r) => {
-      y.value = r;
-    }, N = O({ a: 1 });
-    return n({
-      update: d,
-      selection: y,
-      test: N
-    }), (r, u) => {
-      const m = A, M = F, V = H, L = J;
-      return R((p(), E("div", pe, [
-        f(" 操作按钮组 "),
-        g("div", de, [
-          C(r.$slots, "buttons", { selection: a(y) }, void 0, !0)
+    const $ = p([]), r = (d) => {
+      $.value = d;
+    }, F = M({ a: 1 });
+    return l({
+      update: f,
+      selection: $,
+      test: F
+    }), (d, g) => {
+      const k = X, G = Y, R = Z, W = ee;
+      return le((_(), C("div", Ce, [
+        m(" 操作按钮组 "),
+        x("div", ke, [
+          S(d.$slots, "buttons", { selection: a($) }, void 0, !0)
         ]),
-        f(" 表格主体 "),
-        g("div", me, [
-          B(M, v({
+        m(" 表格主体 "),
+        x("div", xe, [
+          I(G, y({
             ref_key: "table",
-            ref: w
-          }, r.$attrs, {
+            ref: h
+          }, d.$attrs, {
             data: a(s),
-            onSelectionChange: U
+            onSelectionChange: r
           }), {
-            default: j(() => [
-              t.isUseCheckBox ? (p(), b(m, {
+            default: v(() => [
+              e.isUseCheckBox ? (_(), b(k, {
                 key: 0,
                 type: "selection"
-              })) : f("v-if", !0),
-              C(r.$slots, "default", {}, void 0, !0)
+              })) : m("v-if", !0),
+              S(d.$slots, "default", {}, void 0, !0)
             ]),
             _: 3
             /* FORWARDED */
           }, 16, ["data"])
         ]),
-        f(" 分页部分 "),
-        g("div", fe, [
-          B(V, {
-            "page-size": a(l).pageSize,
-            "onUpdate:pageSize": u[0] || (u[0] = (h) => a(l).pageSize = h),
-            "current-page": a(l).currentPage,
-            "onUpdate:currentPage": u[1] || (u[1] = (h) => a(l).currentPage = h),
+        m(" 分页部分 "),
+        x("div", Pe, [
+          I(R, {
+            "page-size": a(n).pageSize,
+            "onUpdate:pageSize": g[0] || (g[0] = (P) => a(n).pageSize = P),
+            "current-page": a(n).currentPage,
+            "onUpdate:currentPage": g[1] || (g[1] = (P) => a(n).currentPage = P),
             background: "",
             layout: "total, prev, pager, next",
             "hide-on-single-page": "",
-            total: a(I)
+            total: a(c)
           }, null, 8, ["page-size", "current-page", "total"])
         ])
       ])), [
-        [L, a(o)]
+        [W, a(o)]
       ]);
     };
   }
 });
-const P = /* @__PURE__ */ k(be, [["__scopeId", "data-v-175e1406"]]), ve = {
-  install(e) {
-    e.component(P.name, P);
+const V = /* @__PURE__ */ w(Oe, [["__scopeId", "data-v-175e1406"]]), Ie = {
+  install(t) {
+    t.component(V.name, V);
   }
-}, ye = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, ze = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  CmTable: P,
-  default: ve
-}, Symbol.toStringTag, { value: "Module" })), D = [], he = /* @__PURE__ */ Object.assign({ "./CmButton/index.ts": ne, "./CmInput/index.ts": le, "./CmSvg/index.ts": ue, "./CmTable/index.ts": ye }), Ce = async () => {
-  for (const e of Object.values(he))
-    D.push(e.default);
+  CmTable: V,
+  default: Ie
+}, Symbol.toStringTag, { value: "Module" })), L = [], Be = /* @__PURE__ */ Object.assign({ "./CmButton/index.ts": _e, "./CmInput/index.ts": de, "./CmSelect/index.ts": ge, "./CmSvg/index.ts": $e, "./CmTable/index.ts": ze }), Ee = async () => {
+  for (const t of Object.values(Be))
+    L.push(t.default);
 };
-Ce();
-const Pe = {
-  install(e) {
-    D.forEach((n) => {
-      e.use(n);
+Ee();
+const De = {
+  install(t) {
+    L.forEach((l) => {
+      t.use(l);
     });
   }
 };
 export {
-  x as CmButton,
-  S as CmInput,
-  $ as CmSvg,
-  P as CmTable,
-  Pe as default
+  z as CmButton,
+  B as CmInput,
+  E as CmSelect,
+  j as CmSvg,
+  V as CmTable,
+  De as default
 };
