@@ -40,6 +40,7 @@ importers:
 
   libs/components:
     specifiers:
+      '@iconify/json': ^2.2.26
       '@types/node': ^18.14.0
       '@vitejs/plugin-vue': ^4.0.0
       '@vueuse/core': ^9.13.0
@@ -49,6 +50,7 @@ importers:
       sass: ^1.58.3
       typescript: ^4.9.3
       unplugin-auto-import: ^0.14.3
+      unplugin-icons: ^0.15.3
       unplugin-vue-components: ^0.24.0
       utils: workspace:*
       vite: ^4.1.0
@@ -62,6 +64,7 @@ importers:
       utils: link:../utils
       vue: registry.npmmirror.com/vue/3.2.47
     devDependencies:
+      '@iconify/json': registry.npmmirror.com/@iconify/json/2.2.26
       '@types/node': registry.npmmirror.com/@types/node/18.14.0
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/4.0.0_vite@4.1.1+vue@3.2.47
       fs-extra: registry.npmmirror.com/fs-extra/11.1.0
@@ -69,6 +72,7 @@ importers:
       sass: registry.npmmirror.com/sass/1.58.3
       typescript: registry.npmmirror.com/typescript/4.9.5
       unplugin-auto-import: registry.npmmirror.com/unplugin-auto-import/0.14.3_@vueuse+core@9.13.0
+      unplugin-icons: registry.npmmirror.com/unplugin-icons/0.15.3
       unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.24.0_vue@3.2.47
       vite: registry.npmmirror.com/vite/4.1.1_hlkwzk2izwsolfmdrejei4vrty
       vite-plugin-dts: registry.npmmirror.com/vite-plugin-dts/2.0.0-beta.0_hn7hpz27f33r4d36fbzikx45ju

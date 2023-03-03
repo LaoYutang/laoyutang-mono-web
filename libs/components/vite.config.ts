@@ -6,6 +6,8 @@ import { ComponentsResolver, UtilsImport } from 'imports'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 export default defineConfig({
   server: {
@@ -35,7 +37,12 @@ export default defineConfig({
     }),
     Components({
       dts: 'src/components/components.d.ts',
-      resolvers: [ComponentsResolver(), ElementPlusResolver()],
+      resolvers: [
+        ElementPlusResolver(),
+        IconsResolver({ prefix: 'icon' }),
+        ComponentsResolver(),
+      ],
     }),
+    Icons({ autoInstall: true, compiler: 'vue3' }),
   ],
 })

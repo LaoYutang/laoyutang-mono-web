@@ -1,30 +1,30 @@
-import { ElButton as te, ElDialog as ne, ElInput as oe, ElInputNumber as le, ElOption as ae, ElSelect as se, ElTreeSelect as ue, ElTableColumn as re, ElTable as ce, ElPagination as ie, ElLoadingDirective as de } from "element-plus/es";
-import { defineComponent as d, ref as b, openBlock as i, createBlock as $, mergeProps as I, unref as r, withCtx as y, renderSlot as P, getCurrentInstance as _e, watch as E, computed as D, isRef as pe, createSlots as Y, createElementVNode as x, createVNode as V, createTextVNode as J, renderList as Z, normalizeProps as W, guardReactiveProps as me, createElementBlock as T, Fragment as N, createCommentVNode as S, useCssVars as fe, reactive as A, withDirectives as ge } from "vue";
-import { _debounce as ve, _deepClone as be } from "utils";
+import { ElButton as ne, ElDialog as oe, ElInput as ae, ElInputNumber as le, ElOption as se, ElSelect as re, ElTreeSelect as ie, ElTableColumn as ue, ElTable as ce, ElPagination as de, ElLoadingDirective as _e } from "element-plus/es";
+import { defineComponent as d, ref as b, openBlock as c, createBlock as k, mergeProps as w, unref as r, withCtx as h, renderSlot as I, createElementBlock as S, createStaticVNode as X, getCurrentInstance as pe, watch as T, computed as z, isRef as fe, createSlots as Y, createElementVNode as P, createVNode as B, createTextVNode as J, renderList as ee, normalizeProps as W, guardReactiveProps as me, Fragment as j, createCommentVNode as $, useCssVars as ge, reactive as A, withDirectives as ve } from "vue";
+import { _debounce as be, _deepClone as he } from "utils";
 const ye = d({
   name: "cm-button"
-}), Oe = /* @__PURE__ */ d({
+}), Ce = /* @__PURE__ */ d({
   ...ye,
   props: {
     handler: null
   },
   setup(e) {
-    const n = e, t = b(!1), a = ve(async (l) => {
+    const n = e, t = b(!1), l = be(async (a) => {
       t.value = !0;
       try {
-        await n.handler(l);
+        await n.handler(a);
       } catch {
       }
       t.value = !1;
     });
-    return (l, u) => {
-      const o = te;
-      return i(), $(o, I(l.$attrs, {
+    return (a, i) => {
+      const o = ne;
+      return c(), k(o, w(a.$attrs, {
         loading: r(t),
-        onClick: r(a)
+        onClick: r(l)
       }), {
-        default: y(() => [
-          P(l.$slots, "default", {}, void 0, !0)
+        default: h(() => [
+          I(a.$slots, "default", {}, void 0, !0)
         ]),
         _: 3
         /* FORWARDED */
@@ -34,46 +34,67 @@ const ye = d({
 });
 const G = (e, n) => {
   const t = e.__vccOpts || e;
-  for (const [a, l] of n)
-    t[a] = l;
+  for (const [l, a] of n)
+    t[l] = a;
   return t;
-}, k = /* @__PURE__ */ G(Oe, [["__scopeId", "data-v-68fd51f0"]]), he = {
+}, E = /* @__PURE__ */ G(Ce, [["__scopeId", "data-v-68fd51f0"]]), Oe = {
   install(e) {
-    e.component(k.name, k);
+    e.component(E.name, E);
   }
-}, Ce = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, $e = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  CmButton: k,
-  default: he
+  CmButton: E,
+  default: Oe
 }, Symbol.toStringTag, { value: "Module" }));
+const Se = {
+  viewBox: "0 0 24 24",
+  width: "1.2em",
+  height: "1.2em"
+}, ke = /* @__PURE__ */ X('<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M5.63604 5.63603C9.15076 2.12131 14.8492 2.12131 18.364 5.63603C21.8787 9.15075 21.8787 14.8492 18.364 18.364C14.8492 21.8787 9.15076 21.8787 5.63604 18.364C2.12132 14.8492 2.12132 9.15075 5.63604 5.63603Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"></animate></path><path stroke-dasharray="18" stroke-dashoffset="18" d="M6 6L18 18"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="18;0"></animate></path></g>', 1), we = [
+  ke
+];
+function Ie(e, n) {
+  return c(), S("svg", Se, we);
+}
+const xe = { name: "line-md-cancel", render: Ie }, Pe = {
+  viewBox: "0 0 24 24",
+  width: "1.2em",
+  height: "1.2em"
+}, Te = /* @__PURE__ */ X('<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"></animate></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M8 12L11 15L16 10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="14;0"></animate></path></g>', 1), Be = [
+  Te
+];
+function Ve(e, n) {
+  return c(), S("svg", Pe, Be);
+}
+const Ee = { name: "line-md-confirm-circle", render: Ve };
 var H;
-const j = typeof window < "u", Se = (e) => typeof e < "u", $e = (e) => typeof e == "function";
-j && ((H = window == null ? void 0 : window.navigator) != null && H.userAgent) && /iP(ad|hone|od)/.test(window.navigator.userAgent);
-function Ie(e) {
+const N = typeof window < "u", Ne = (e) => typeof e < "u", je = (e) => typeof e == "function";
+N && ((H = window == null ? void 0 : window.navigator) != null && H.userAgent) && /iP(ad|hone|od)/.test(window.navigator.userAgent);
+function ze(e) {
   return e;
 }
-j && window.document;
-j && window.navigator;
-j && window.location;
-function Pe(e) {
+N && window.document;
+N && window.navigator;
+N && window.location;
+function De(e) {
   return JSON.parse(JSON.stringify(e));
 }
-const z = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, U = "__vueuse_ssr_handlers__";
-z[U] = z[U] || {};
-z[U];
-var K;
+const D = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, M = "__vueuse_ssr_handlers__";
+D[M] = D[M] || {};
+D[M];
+var Z;
 (function(e) {
   e.UP = "UP", e.RIGHT = "RIGHT", e.DOWN = "DOWN", e.LEFT = "LEFT", e.NONE = "NONE";
-})(K || (K = {}));
-var we = Object.defineProperty, q = Object.getOwnPropertySymbols, xe = Object.prototype.hasOwnProperty, Te = Object.prototype.propertyIsEnumerable, X = (e, n, t) => n in e ? we(e, n, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[n] = t, Ee = (e, n) => {
+})(Z || (Z = {}));
+var Me = Object.defineProperty, K = Object.getOwnPropertySymbols, Ue = Object.prototype.hasOwnProperty, Qe = Object.prototype.propertyIsEnumerable, q = (e, n, t) => n in e ? Me(e, n, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[n] = t, Le = (e, n) => {
   for (var t in n || (n = {}))
-    xe.call(n, t) && X(e, t, n[t]);
-  if (q)
-    for (var t of q(n))
-      Te.call(n, t) && X(e, t, n[t]);
+    Ue.call(n, t) && q(e, t, n[t]);
+  if (K)
+    for (var t of K(n))
+      Qe.call(n, t) && q(e, t, n[t]);
   return e;
 };
-const Ve = {
+const Fe = {
   easeInSine: [0.12, 0, 0.39, 0],
   easeOutSine: [0.61, 1, 0.88, 1],
   easeInOutSine: [0.37, 0, 0.63, 1],
@@ -99,40 +120,40 @@ const Ve = {
   easeOutBack: [0.34, 1.56, 0.64, 1],
   easeInOutBack: [0.68, -0.6, 0.32, 1.6]
 };
-Ee({
-  linear: Ie
-}, Ve);
-function Be(e, n, t, a = {}) {
-  var l, u, o;
+Le({
+  linear: ze
+}, Fe);
+function Re(e, n, t, l = {}) {
+  var a, i, o;
   const {
     clone: s = !1,
     passive: g = !1,
     eventName: _,
     deep: v = !1,
-    defaultValue: c
-  } = a, p = _e(), m = t || (p == null ? void 0 : p.emit) || ((l = p == null ? void 0 : p.$emit) == null ? void 0 : l.bind(p)) || ((o = (u = p == null ? void 0 : p.proxy) == null ? void 0 : u.$emit) == null ? void 0 : o.bind(p == null ? void 0 : p.proxy));
-  let f = _;
-  n || (n = "modelValue"), f = _ || f || `update:${n.toString()}`;
-  const C = (O) => s ? $e(s) ? s(O) : Pe(O) : O, B = () => Se(e[n]) ? C(e[n]) : c;
+    defaultValue: u
+  } = l, p = pe(), f = t || (p == null ? void 0 : p.emit) || ((a = p == null ? void 0 : p.$emit) == null ? void 0 : a.bind(p)) || ((o = (i = p == null ? void 0 : p.proxy) == null ? void 0 : i.$emit) == null ? void 0 : o.bind(p == null ? void 0 : p.proxy));
+  let m = _;
+  n || (n = "modelValue"), m = _ || m || `update:${n.toString()}`;
+  const O = (y) => s ? je(s) ? s(y) : De(y) : y, V = () => Ne(e[n]) ? O(e[n]) : u;
   if (g) {
-    const O = B(), w = b(O);
-    return E(() => e[n], (h) => w.value = C(h)), E(w, (h) => {
-      (h !== e[n] || v) && m(f, h);
-    }, { deep: v }), w;
+    const y = V(), x = b(y);
+    return T(() => e[n], (C) => x.value = O(C)), T(x, (C) => {
+      (C !== e[n] || v) && f(m, C);
+    }, { deep: v }), x;
   } else
-    return D({
+    return z({
       get() {
-        return B();
+        return V();
       },
-      set(O) {
-        m(f, O);
+      set(y) {
+        f(m, y);
       }
     });
 }
-const ke = { class: "footer" }, je = d({
+const Ge = { class: "footer" }, Je = d({
   name: "CmDialog"
-}), Q = /* @__PURE__ */ d({
-  ...je,
+}), U = /* @__PURE__ */ d({
+  ...Je,
   props: {
     modelValue: { type: Boolean },
     isShowButtons: { type: Boolean, default: !0 },
@@ -140,51 +161,55 @@ const ke = { class: "footer" }, je = d({
   },
   emits: ["update:modelValue"],
   setup(e, { emit: n }) {
-    const t = e, a = Be(t, "modelValue", n), l = () => {
+    const t = e, l = Re(t, "modelValue", n), a = () => {
       t.beforeconfrim().then(() => {
-        a.value = !1;
+        l.value = !1;
       }).catch((o) => o);
-    }, u = () => {
-      a.value = !1;
+    }, i = () => {
+      l.value = !1;
     };
     return (o, s) => {
-      const g = k, _ = ne;
-      return i(), $(_, I({
-        modelValue: r(a),
-        "onUpdate:modelValue": s[0] || (s[0] = (v) => pe(a) ? a.value = v : null)
+      const g = E, _ = oe;
+      return c(), k(_, w({
+        modelValue: r(l),
+        "onUpdate:modelValue": s[0] || (s[0] = (v) => fe(l) ? l.value = v : null)
       }, o.$attrs, {
         class: "cm-dialog",
         draggable: "",
         "close-on-click-modal": !1,
         "destroy-on-close": ""
       }), Y({
-        default: y(() => [
-          P(o.$slots, "default")
+        default: h(() => [
+          I(o.$slots, "default")
         ]),
         _: 2
         /* DYNAMIC */
       }, [
         e.isShowButtons ? {
           name: "footer",
-          fn: y(() => [
-            x("div", ke, [
-              V(g, { handler: u }, {
-                default: y(() => [
-                  J("取消")
-                ]),
-                _: 1
-                /* STABLE */
-              }),
-              V(g, {
-                handler: l,
-                type: "primary"
+          fn: h(() => [
+            P("div", Ge, [
+              B(g, {
+                handler: i,
+                icon: r(xe)
               }, {
-                default: y(() => [
-                  J("提交")
+                default: h(() => [
+                  J(" 取消 ")
                 ]),
                 _: 1
                 /* STABLE */
-              })
+              }, 8, ["icon"]),
+              B(g, {
+                handler: a,
+                type: "primary",
+                icon: r(Ee)
+              }, {
+                default: h(() => [
+                  J(" 提交 ")
+                ]),
+                _: 1
+                /* STABLE */
+              }, 8, ["icon"])
             ])
           ]),
           key: "0"
@@ -192,61 +217,61 @@ const ke = { class: "footer" }, je = d({
       ]), 1040, ["modelValue"]);
     };
   }
-}), Ne = {
+}), We = {
   install(e) {
-    e.component(Q.name, Q);
+    e.component(U.name, U);
   }
-}, De = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, Ae = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  CmDialog: Q,
-  default: Ne
+  CmDialog: U,
+  default: We
 }, Symbol.toStringTag, { value: "Module" }));
-const ze = d({
+const He = d({
   name: "CmInput"
-}), F = /* @__PURE__ */ d({
-  ...ze,
+}), Q = /* @__PURE__ */ d({
+  ...He,
   props: {
     type: { default: "text" }
   },
   setup(e) {
     const n = e;
-    return (t, a) => {
-      const l = oe, u = le;
-      return n.type !== "number" ? (i(), $(l, I({ key: 0 }, t.$attrs, {
+    return (t, l) => {
+      const a = ae, i = le;
+      return n.type !== "number" ? (c(), k(a, w({ key: 0 }, t.$attrs, {
         type: n.type,
         clearable: ""
       }), Y({
         _: 2
         /* DYNAMIC */
       }, [
-        Z(t.$slots, (o, s) => ({
+        ee(t.$slots, (o, s) => ({
           name: s,
-          fn: y((g) => [
-            P(t.$slots, s, W(me(g)))
+          fn: h((g) => [
+            I(t.$slots, s, W(me(g)))
           ])
         }))
-      ]), 1040, ["type"])) : (i(), $(
-        u,
-        W(I({ key: 1 }, t.$attrs)),
+      ]), 1040, ["type"])) : (c(), k(
+        i,
+        W(w({ key: 1 }, t.$attrs)),
         null,
         16
         /* FULL_PROPS */
       ));
     };
   }
-}), Ue = {
+}), Ze = {
   install(e) {
-    e.component(F.name, F);
+    e.component(Q.name, Q);
   }
-}, Qe = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, Ke = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  CmInput: F,
-  default: Ue
+  CmInput: Q,
+  default: Ze
 }, Symbol.toStringTag, { value: "Module" }));
-const Fe = d({
+const qe = d({
   name: "CmSelect"
-}), M = /* @__PURE__ */ d({
-  ...Fe,
+}), L = /* @__PURE__ */ d({
+  ...qe,
   props: {
     type: { default: "normal" },
     getData: null,
@@ -255,41 +280,41 @@ const Fe = d({
   },
   emits: ["update:modelValue"],
   setup(e, { emit: n }) {
-    const t = e, a = b([]), l = b(!1), u = (o) => {
-      l.value = !0, t.getData(o).then((s) => {
-        a.value = s;
+    const t = e, l = b([]), a = b(!1), i = (o) => {
+      a.value = !0, t.getData(o).then((s) => {
+        l.value = s;
       }).finally(() => {
-        l.value = !1;
+        a.value = !1;
       });
     };
-    return u(t.params), E(
+    return i(t.params), T(
       () => t.params,
       () => {
-        n("update:modelValue", null), u(t.params);
+        n("update:modelValue", null), i(t.params);
       }
     ), (o, s) => {
-      const g = ae, _ = se, v = ue;
-      return i(), T(
-        N,
+      const g = se, _ = re, v = ie;
+      return c(), S(
+        j,
         null,
         [
-          S(" 普通下拉框 "),
-          t.type === "normal" ? (i(), $(_, I({ key: 0 }, o.$attrs, {
+          $(" 普通下拉框 "),
+          t.type === "normal" ? (c(), k(_, w({ key: 0 }, o.$attrs, {
             multiple: t.multiple,
             "show-checkbox": !1,
-            "onUpdate:modelValue": s[0] || (s[0] = (c) => o.$emit("update:modelValue", c))
+            "onUpdate:modelValue": s[0] || (s[0] = (u) => o.$emit("update:modelValue", u))
           }), {
-            default: y(() => [
-              (i(!0), T(
-                N,
+            default: h(() => [
+              (c(!0), S(
+                j,
                 null,
-                Z(r(a), (c) => (i(), $(g, {
-                  key: c.value,
-                  label: c.label,
-                  value: c.value
+                ee(r(l), (u) => (c(), k(g, {
+                  key: u.value,
+                  label: u.label,
+                  value: u.value
                 }, {
-                  default: y(() => [
-                    P(o.$slots, "default", { data: c })
+                  default: h(() => [
+                    I(o.$slots, "default", { data: u })
                   ]),
                   _: 2
                   /* DYNAMIC */
@@ -300,19 +325,19 @@ const Fe = d({
             ]),
             _: 3
             /* FORWARDED */
-          }, 16, ["multiple"])) : t.type === "tree" ? (i(), T(
-            N,
+          }, 16, ["multiple"])) : t.type === "tree" ? (c(), S(
+            j,
             { key: 1 },
             [
-              S(" 树形下拉框 "),
-              V(v, I(o.$attrs, {
-                data: r(a),
+              $(" 树形下拉框 "),
+              B(v, w(o.$attrs, {
+                data: r(l),
                 multiple: t.multiple,
                 "show-checkbox": t.multiple,
-                "onUpdate:modelValue": s[1] || (s[1] = (c) => o.$emit("update:modelValue", c))
+                "onUpdate:modelValue": s[1] || (s[1] = (u) => o.$emit("update:modelValue", u))
               }), {
-                default: y(({ data: c }) => [
-                  P(o.$slots, "default", { data: c })
+                default: h(({ data: u }) => [
+                  I(o.$slots, "default", { data: u })
                 ]),
                 _: 3
                 /* FORWARDED */
@@ -320,28 +345,28 @@ const Fe = d({
             ],
             2112
             /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
-          )) : S("v-if", !0)
+          )) : $("v-if", !0)
         ],
         2112
         /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
       );
     };
   }
-}), Me = {
+}), Xe = {
   install(e) {
-    e.component(M.name, M);
+    e.component(L.name, L);
   }
-}, Le = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, Ye = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  CmSelect: M,
-  default: Me
-}, Symbol.toStringTag, { value: "Module" })), Re = {
+  CmSelect: L,
+  default: Xe
+}, Symbol.toStringTag, { value: "Module" })), et = {
   "aria-hidden": "true",
   class: "svg-icon"
-}, Ge = ["xlink:href"], Je = d({
+}, tt = ["xlink:href"], nt = d({
   name: "CmSvg"
-}), We = /* @__PURE__ */ d({
-  ...Je,
+}), ot = /* @__PURE__ */ d({
+  ...nt,
   props: {
     prefix: { default: "icon" },
     name: null,
@@ -349,28 +374,28 @@ const Fe = d({
   },
   setup(e) {
     const n = e;
-    fe((l) => ({
-      "88ae7cc6": r(a)
+    ge((a) => ({
+      "88ae7cc6": r(l)
     }));
-    const t = D(() => `#${n.prefix}-${n.name}`), a = D(() => n.widthScale.toString() + "em");
-    return (l, u) => (i(), T("svg", Re, [
-      x("use", { "xlink:href": r(t) }, null, 8, Ge)
+    const t = z(() => `#${n.prefix}-${n.name}`), l = z(() => n.widthScale.toString() + "em");
+    return (a, i) => (c(), S("svg", et, [
+      P("use", { "xlink:href": r(t) }, null, 8, tt)
     ]));
   }
 });
-const L = /* @__PURE__ */ G(We, [["__scopeId", "data-v-5865a63a"]]), Ae = {
+const F = /* @__PURE__ */ G(ot, [["__scopeId", "data-v-5865a63a"]]), at = {
   install(e) {
-    e.component(L.name, L);
+    e.component(F.name, F);
   }
-}, He = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, lt = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  CmSvg: L,
-  default: Ae
+  CmSvg: F,
+  default: at
 }, Symbol.toStringTag, { value: "Module" }));
-const Ke = { class: "cm-table" }, qe = { class: "buttons" }, Xe = { class: "table" }, Ye = { class: "pager" }, Ze = d({
+const st = { class: "cm-table" }, rt = { class: "buttons" }, it = { class: "table" }, ut = { class: "pager" }, ct = d({
   name: "CmTable"
-}), et = /* @__PURE__ */ d({
-  ...Ze,
+}), dt = /* @__PURE__ */ d({
+  ...ct,
   props: {
     getData: null,
     isInitData: { type: Boolean, default: !0 },
@@ -379,66 +404,66 @@ const Ke = { class: "cm-table" }, qe = { class: "buttons" }, Xe = { class: "tabl
     isUseCheckBox: { type: Boolean, default: !0 }
   },
   setup(e, { expose: n }) {
-    const t = e, a = b([]), l = b(!1), u = b({}), o = A({
+    const t = e, l = b([]), a = b(!1), i = b({}), o = A({
       pageSize: 20,
       currentPage: 1
-    }), s = b(0), g = b(null), _ = (m, f = !0) => (m && (u.value = be(m)), f && (o.currentPage = 1), t.isUsePager && (u.value.pager = o), l.value = !0, t.getData(u).then((C) => {
-      a.value = C.datas, s.value = C.total;
+    }), s = b(0), g = b(null), _ = (f, m = !0) => (f && (i.value = he(f)), m && (o.currentPage = 1), t.isUsePager && (i.value.pager = o), a.value = !0, t.getData(i).then((O) => {
+      l.value = O.datas, s.value = O.total;
     }).catch().finally(() => {
-      l.value = !1;
+      a.value = !1;
     }));
-    t.isInitData && _(t.initParams), E(
+    t.isInitData && _(t.initParams), T(
       () => o.currentPage,
       () => {
         _(null, !1);
       }
-    ), E(
+    ), T(
       () => o.pageSize,
       () => {
         _();
       }
     );
-    const v = b([]), c = (m) => {
-      v.value = m;
+    const v = b([]), u = (f) => {
+      v.value = f;
     }, p = A({ a: 1 });
     return n({
       update: _,
       selection: v,
       test: p
-    }), (m, f) => {
-      const C = re, B = ce, O = ie, w = de;
-      return ge((i(), T("div", Ke, [
-        S(" 操作按钮组 "),
-        x("div", qe, [
-          P(m.$slots, "buttons", { selection: r(v) }, void 0, !0)
+    }), (f, m) => {
+      const O = ue, V = ce, y = de, x = _e;
+      return ve((c(), S("div", st, [
+        $(" 操作按钮组 "),
+        P("div", rt, [
+          I(f.$slots, "buttons", { selection: r(v) }, void 0, !0)
         ]),
-        S(" 表格主体 "),
-        x("div", Xe, [
-          V(B, I({
+        $(" 表格主体 "),
+        P("div", it, [
+          B(V, w({
             ref_key: "table",
             ref: g
-          }, m.$attrs, {
-            data: r(a),
-            onSelectionChange: c
+          }, f.$attrs, {
+            data: r(l),
+            onSelectionChange: u
           }), {
-            default: y(() => [
-              t.isUseCheckBox ? (i(), $(C, {
+            default: h(() => [
+              t.isUseCheckBox ? (c(), k(O, {
                 key: 0,
                 type: "selection"
-              })) : S("v-if", !0),
-              P(m.$slots, "default", {}, void 0, !0)
+              })) : $("v-if", !0),
+              I(f.$slots, "default", {}, void 0, !0)
             ]),
             _: 3
             /* FORWARDED */
           }, 16, ["data"])
         ]),
-        S(" 分页部分 "),
-        x("div", Ye, [
-          V(O, {
+        $(" 分页部分 "),
+        P("div", ut, [
+          B(y, {
             "page-size": r(o).pageSize,
-            "onUpdate:pageSize": f[0] || (f[0] = (h) => r(o).pageSize = h),
+            "onUpdate:pageSize": m[0] || (m[0] = (C) => r(o).pageSize = C),
             "current-page": r(o).currentPage,
-            "onUpdate:currentPage": f[1] || (f[1] = (h) => r(o).currentPage = h),
+            "onUpdate:currentPage": m[1] || (m[1] = (C) => r(o).currentPage = C),
             background: "",
             layout: "total, prev, pager, next",
             "hide-on-single-page": "",
@@ -446,37 +471,37 @@ const Ke = { class: "cm-table" }, qe = { class: "buttons" }, Xe = { class: "tabl
           }, null, 8, ["page-size", "current-page", "total"])
         ])
       ])), [
-        [w, r(l)]
+        [x, r(a)]
       ]);
     };
   }
 });
-const R = /* @__PURE__ */ G(et, [["__scopeId", "data-v-175e1406"]]), tt = {
+const R = /* @__PURE__ */ G(dt, [["__scopeId", "data-v-175e1406"]]), _t = {
   install(e) {
     e.component(R.name, R);
   }
-}, nt = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, pt = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   CmTable: R,
-  default: tt
-}, Symbol.toStringTag, { value: "Module" })), ee = [], ot = /* @__PURE__ */ Object.assign({ "./CmButton/index.ts": Ce, "./CmDialog/index.ts": De, "./CmInput/index.ts": Qe, "./CmSelect/index.ts": Le, "./CmSvg/index.ts": He, "./CmTable/index.ts": nt }), lt = async () => {
-  for (const e of Object.values(ot))
-    ee.push(e.default);
+  default: _t
+}, Symbol.toStringTag, { value: "Module" })), te = [], ft = /* @__PURE__ */ Object.assign({ "./CmButton/index.ts": $e, "./CmDialog/index.ts": Ae, "./CmInput/index.ts": Ke, "./CmSelect/index.ts": Ye, "./CmSvg/index.ts": lt, "./CmTable/index.ts": pt }), mt = async () => {
+  for (const e of Object.values(ft))
+    te.push(e.default);
 };
-lt();
-const rt = {
+mt();
+const ht = {
   install(e) {
-    ee.forEach((n) => {
+    te.forEach((n) => {
       e.use(n);
     });
   }
 };
 export {
-  k as CmButton,
-  Q as CmDialog,
-  F as CmInput,
-  M as CmSelect,
-  L as CmSvg,
+  E as CmButton,
+  U as CmDialog,
+  Q as CmInput,
+  L as CmSelect,
+  F as CmSvg,
   R as CmTable,
-  rt as default
+  ht as default
 };

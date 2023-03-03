@@ -9,6 +9,8 @@ const AutoImport = require('unplugin-auto-import/vite')
 const Components = require('unplugin-vue-components/vite')
 const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 const { UtilsImport } = require('imports')
+const Icons = require('unplugin-icons/vite')
+const IconsResolver = require('unplugin-icons/resolver')
 
 const entryDir = path.resolve(__dirname, '../src/components')
 const outputDir = path.resolve(__dirname, '../build')
@@ -24,9 +26,10 @@ const baseConfig = defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver(), IconsResolver({ prefix: 'icon' })],
       dts: false,
     }),
+    Icons({ autoInstall: true, compiler: 'vue3' }),
     dts(),
     vueSetupExtend(),
   ],
