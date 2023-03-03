@@ -44,10 +44,17 @@ const handleFold = () => {
     <!-- 右侧按钮 -->
     <div class="buttons">
       <el-button-group>
-        <CmButton type="primary" :icon="IconSearch" :handler="queryHandler">
+        <CmButton
+          type="primary"
+          :icon="IconSearch"
+          :handler="props.queryHandler"
+        >
           查询
         </CmButton>
-        <CmButton :icon="IconReset" :handler="resetHandler">重置</CmButton>
+
+        <CmButton :icon="IconReset" :handler="props.resetHandler">
+          重置
+        </CmButton>
       </el-button-group>
     </div>
   </div>
