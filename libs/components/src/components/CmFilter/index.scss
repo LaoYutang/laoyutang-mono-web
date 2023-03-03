@@ -1,0 +1,25 @@
+.cm-filter {
+  display: flex;
+  justify-content: space-between;
+
+  .form {
+    flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.2s ease-in;
+
+    .form-fold_icon {
+      position: absolute;
+      top: 0;
+      right: 8px;
+    }
+  }
+
+  .buttons {
+    flex: 0 0 180px;
+
+    :deep(.el-button) {
+      border-radius: 0;
+    }
+  }
+}

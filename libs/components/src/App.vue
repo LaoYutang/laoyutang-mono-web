@@ -6,8 +6,28 @@ const visible = ref(false)
 
 <template>
   <el-config-provider :locale="zhCn">
-    <CmButton :handler="() => (visible = true)">open</CmButton>
-    <CmDialog v-model="visible">Test</CmDialog>
+    <CmFilter>
+      <el-form inline>
+        <el-form-item label="aaaa">
+          <el-input />
+        </el-form-item>
+        <el-form-item label="aaaa">
+          <el-input />
+        </el-form-item>
+        <el-form-item label="aaaa">
+          <el-input />
+        </el-form-item>
+        <el-form-item label="aaaa">
+          <el-input />
+        </el-form-item>
+        <el-form-item label="aaaa">
+          <el-input />
+        </el-form-item>
+        <el-form-item label="aaaa">
+          <el-input />
+        </el-form-item>
+      </el-form>
+    </CmFilter>
   </el-config-provider>
 </template>
 

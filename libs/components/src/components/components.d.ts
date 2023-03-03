@@ -9,13 +9,16 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Cmbutton: typeof import('components/build/Cmbutton')['Cmbutton']
     CmButton: typeof import('./CmButton/index.vue')['default']
     CmDialog: typeof import('./CmDialog/index.vue')['default']
+    CmFilter: typeof import('./CmFilter/index.vue')['default']
     CmInput: typeof import('./CmInput/index.vue')['default']
     CmSelect: typeof import('./CmSelect/index.vue')['default']
     CmSvg: typeof import('./CmSvg/index.vue')['default']
     CmTable: typeof import('./CmTable/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElButtonGroup: typeof import('element-plus/es')['ElButtonGroup']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElDialog: typeof import('element-plus/es')['ElDialog']
     ElForm: typeof import('element-plus/es')['ElForm']
@@ -30,6 +33,8 @@ declare module '@vue/runtime-core' {
     ElTreeSelect: typeof import('element-plus/es')['ElTreeSelect']
     IconCarbon4kFilled: typeof import('~icons/carbon/4k-filled')['default']
     IconClarityCancelLine: typeof import('~icons/clarity/cancel-line')['default']
+    IconIcRoundKeyboardArrowDown: typeof import('~icons/ic/round-keyboard-arrow-down')['default']
+    IconIcRoundKeyboardArrowUp: typeof import('~icons/ic/round-keyboard-arrow-up')['default']
     IconLineMdCancel: typeof import('~icons/line-md/cancel')['default']
     IconLineMdConfirmCircle: typeof import('~icons/line-md/confirm-circle')['default']
     IconMdiLightCancel: typeof import('~icons/mdi-light/cancel')['default']

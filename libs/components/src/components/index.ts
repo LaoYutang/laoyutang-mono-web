@@ -4,6 +4,7 @@ export * from './CmTable'
 export * from './CmInput'
 export * from './CmSelect'
 export * from './CmDialog'
+export * from './CmFilter'
 
 import type { App } from 'vue'
 
