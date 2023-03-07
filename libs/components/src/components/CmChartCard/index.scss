@@ -1,0 +1,39 @@
+.cm-chart-card {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-left {
+      display: flex;
+
+      .header-left-title {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .header-left-dropdown {
+        cursor: pointer;
+        margin-left: 10px;
+
+        .icon {
+          font-size: 18px;
+
+          &:hover {
+            color: #409eff;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .header-right {
+    }
+  }
+
+  .card-body {
+  }
+}

@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
+    "echarts": "^5.4.1",
     "element-plus": "^2.2.32",
     "utils": "workspace:*",
     "vue": "^3.2.45"

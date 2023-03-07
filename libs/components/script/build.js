@@ -36,7 +36,16 @@ const baseConfig = defineConfig({
 })
 
 const rollupOptions = {
-  external: ['vue', 'element-plus/es', 'utils'],
+  external: [
+    'vue',
+    'element-plus/es',
+    'utils',
+    'echarts/core',
+    'echarts/charts',
+    'echarts/components',
+    'echarts/features',
+    'echarts/renderers',
+  ],
   output: {
     globals: {
       vue: 'Vue',
