@@ -8,6 +8,7 @@ export * from './CmFilter'
 export * from './CmChart'
 export * from './CmChartCard'
 export * from './CmEmpty'
+export * from './CmRadio'
 
 import type { App } from 'vue'
 
