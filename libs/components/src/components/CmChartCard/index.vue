@@ -141,7 +141,7 @@ const chooseType = (index: number) => {
       <!-- 卡片主体 -->
       <div class="card-body" :style="`height: ${props.height}px`">
         <!-- 空 -->
-        <el-empty v-if="isNoData" description="No Data" />
+        <CmEmpty v-if="isNoData" />
         <!-- 图表 -->
         <CmChart
           v-else-if="currentIndex < selectData.length - 1"

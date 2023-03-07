@@ -6,6 +6,8 @@ export * from './CmSelect'
 export * from './CmDialog'
 export * from './CmFilter'
 export * from './CmChart'
+export * from './CmChartCard'
+export * from './CmEmpty'
 
 import type { App } from 'vue'
 

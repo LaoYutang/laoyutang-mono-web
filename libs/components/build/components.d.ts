@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     CmChart: typeof import('./CmChart/index.vue')['default']
     CmChartCard: typeof import('./CmChartCard/index.vue')['default']
     CmDialog: typeof import('./CmDialog/index.vue')['default']
+    CmEmpty: typeof import('./CmEmpty/index.vue')['default']
     CmFilter: typeof import('./CmFilter/index.vue')['default']
     CmInput: typeof import('./CmInput/index.vue')['default']
     CmSelect: typeof import('./CmSelect/index.vue')['default']

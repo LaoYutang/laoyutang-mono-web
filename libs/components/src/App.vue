@@ -42,53 +42,6 @@ const getData = async () => {
 
 <template>
   <el-config-provider :locale="zhCn">
-    <CmChartCard
-      name="testPie"
-      title="shhahah书局12 "
-      :configs="configs"
-      :get-data="getData"
-    />
-    <CmChartCard
-      name="testPie"
-      title="shhahah书局 2"
-      :configs="configs"
-      :get-data="getData"
-    />
-    <CmChartCard
-      name="testPie"
-      title="shhahah书局3 "
-      :configs="configs"
-      :get-data="getData"
-    />
-    <CmChartCard
-      name="testPie"
-      title="shhahah书局4 "
-      :configs="configs"
-      :get-data="getData"
-    />
-    <CmChartCard
-      name="testPie"
-      title="shhahah书局5 "
-      :configs="configs"
-      :get-data="getData"
-    />
-    <CmChartCard
-      name="testPie"
-      title="shhahah书局6 "
-      :configs="configs"
-      :get-data="getData"
-    />
-    <CmChartCard
-      name="testPie"
-      title="shhahah书局7 "
-      :configs="configs"
-      :get-data="getData"
-    />
-    <CmChartCard
-      name="testPie"
-      title="shhahah书局 "
-      :configs="configs"
-      :get-data="getData"
-    />
+    <CmEmpty />
   </el-config-provider>
 </template>
