@@ -3,7 +3,7 @@ ElMessage.success('ss')
 </script>
 
 <template>
-  <div class="container">
+  <div class="container custom">
     <div class="menu" />
     <div class="navi" />
     <div id="content" class="content" />
