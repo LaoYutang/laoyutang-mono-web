@@ -4,6 +4,7 @@ import App from './App.vue'
 import Wujie from 'wujie-vue3'
 import Router from '@/router'
 import '@/utils/promise-flat'
+import 'styles'
 
 const { setupApp, preloadApp, bus } = Wujie
 

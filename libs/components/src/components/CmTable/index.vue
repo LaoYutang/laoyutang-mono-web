@@ -95,7 +95,7 @@ defineExpose({
 <template>
   <div v-loading="loading" class="cm-table">
     <!-- 操作按钮组 -->
-    <div class="buttons">
+    <div v-if="$slots.buttons" class="buttons">
       <slot name="buttons" :selection="selection" />
     </div>
 

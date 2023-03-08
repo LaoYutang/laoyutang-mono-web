@@ -17,7 +17,7 @@ ElMessage.success('ss')
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 48px 1fr;
+  grid-template-rows: var(--cm-navi-height) 1fr;
   grid-template-columns: 200px 1fr;
 }
 
@@ -34,6 +34,6 @@ ElMessage.success('ss')
 .content {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 </style>

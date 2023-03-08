@@ -1,0 +1,14 @@
+{
+  "name": "styles",
+  "private": true,
+  "version": "0.0.0",
+  "sideEffects": [
+    "./index.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.css"
+    }
+  },
+  "author": "ewen.zhang"
+}

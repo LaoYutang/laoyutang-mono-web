@@ -1,0 +1,4 @@
+/* 全局变量挂在#app上 不挂在:root上 wujie中html元素都是父应用的html */
+#app {
+  --cm-navi-height: 48px;
+}
