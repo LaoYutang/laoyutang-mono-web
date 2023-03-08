@@ -10,13 +10,12 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
-    "element-plus": "^2.2.32",
-    "utils": "workspace:*",
-    "styles": "workspace:*",
     "components": "workspace:*",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6",
-    "wujie-vue3": "^1.0.6"
+    "element-plus": "^2.2.32",
+    "qiankun": "^2.10.2",
+    "styles": "workspace:*",
+    "utils": "workspace:*",
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.26",

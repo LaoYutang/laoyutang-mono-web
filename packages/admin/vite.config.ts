@@ -8,6 +8,9 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import vueSetupExtend from 'vite-plugin-vue-setup-extend'
+import qiankun from 'vite-plugin-qiankun'
+
+const useDevMode = true
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -49,5 +52,6 @@ export default defineConfig({
       ],
     }),
     Icons({ autoInstall: true, compiler: 'vue3' }),
+    qiankun('admin', { useDevMode }),
   ],
 })

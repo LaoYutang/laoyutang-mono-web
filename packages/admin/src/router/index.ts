@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { qiankunWindow } from 'vite-plugin-qiankun/es/helper'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -16,7 +17,9 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(
+    qiankunWindow.__POWERED_BY_QIANKUN__ ? '/admin' : '/',
+  ),
   routes,
 })
 

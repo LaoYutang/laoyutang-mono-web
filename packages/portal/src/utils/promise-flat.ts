@@ -1,6 +1,6 @@
 declare global {
   interface Promise<T> {
-    flat: () => Promise<any>
+    flat: () => Promise<[Error | null, T | object]>
   }
 }
 
